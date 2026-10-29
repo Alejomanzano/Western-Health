@@ -1,1159 +1,1156 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@500&family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@500&family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap"); // trae las fuentes Lexend y Work Sans desde Google Fonts
 
 // Colores
-$naranja: #c94900;
-$verde-oscuro: #10551f;
-$verde: #2c833e;
-$lima: #b4c90a;
-$amarillo: #ffb800;
-$negro: #151313;
-$blanco: #ffffff;
-$gris-borde: #d1d1cf;
-$gris-claro: #e7e7e6;
-$fondo-claro: #fcfbf9;
-$verde-claro: #eaf3ec;
-$gris-texto: #282626;
-$negro-puro: #000000;
+$naranja: #c94900; // color naranja (links y botones)
+$verde-oscuro: #10551f; // verde oscuro (fondo del masthead y tabla)
+$verde: #2c833e; // verde principal (iconos, tarjetas, figuras)
+$lima: #b4c90a; // verde lima (bordes y figuras)
+$amarillo: #ffb800; // amarillo (figuras decorativas)
+$negro: #151313; // negro suave para títulos
+$blanco: #ffffff; // blanco
+$gris-borde: #d1d1cf; // gris para bordes y líneas
+$gris-claro: #e7e7e6; // gris claro para separadores
+$fondo-claro: #fcfbf9; // blanco crema para fondos suaves
+$verde-claro: #eaf3ec; // verde muy suave para fondos
+$gris-texto: #282626; // gris oscuro para el texto normal
+$negro-puro: #000000; // negro puro (#000)
 
 // Fuentes
-$fuente-titulos: "Helvetica Neue", Arial, sans-serif;
-$fuente-lexend: "Lexend", sans-serif;
-$fuente-work: "Work Sans", sans-serif;
+$fuente-titulos: "Helvetica Neue", Arial, sans-serif; // tipo de letra para títulos
+$fuente-lexend: "Lexend", sans-serif; // tipo de letra Lexend (menús y botones)
+$fuente-work: "Work Sans", sans-serif; // tipo de letra Work Sans (textos)
 
 /* ===== Estilos generales ===== */
-*, *::before, *::after {
-  box-sizing: border-box;
+*, *::before, *::after { // todos los elementos de la página y sus ::before/::after
+  box-sizing: border-box; // el padding y el borde cuentan dentro del ancho total
 }
 
-body {
-  margin: 0;
-  font-family: sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.55;
-  color: $gris-texto;
-  background: $blanco;
+body { // toda la página
+  margin: 0; // quita el espacio de afuera
+  font-family: sans-serif; // tipo de letra base de la página
+  font-size: 1.125rem; // tamaño de la letra
+  line-height: 1.55; // altura de cada línea de texto (espacio entre líneas)
+  color: $gris-texto; // color del texto (gris oscuro del texto)
+  background: $blanco; // color de fondo (blanco)
 }
 
-h1, h2, h3, p, figure {
-  margin: 0;
+h1, h2, h3, p, figure { // títulos h1-h3, párrafos y figuras
+  margin: 0; // quita el espacio de afuera
 }
 
-ul, ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+ul, ol { // todas las listas
+  margin: 0; // quita el espacio de afuera
+  padding: 0; // quita el espacio de adentro
+  list-style: none; // quita las viñetas de la lista
 }
 
-img, svg {
-  display: block;
-  max-width: 100%;
+img, svg { // todas las imágenes e iconos svg
+  display: block; // ocupa todo el ancho, como un bloque
+  max-width: 100%; // nunca pasa del ancho de su contenedor (imágenes responsive)
 }
 
-a {
-  color: inherit;
+a { // todos los links
+  color: inherit; // hereda el color del texto de su contenedor
 }
 
-:focus-visible {
-  outline: 3px solid $verde;
-  outline-offset: 2px;
+:focus-visible { // cualquier elemento cuando se navega con el teclado (Tab)
+  outline: 3px solid $verde; // contorno visible (para accesibilidad con teclado)
+  outline-offset: 2px; // separación entre el elemento y su contorno
 }
 
 /* ===== Títulos ===== */
-.heading {
-  font-family: $fuente-titulos;
-  font-weight: 500;
-  line-height: 1.2;
-  color: $negro;
+.heading { // base de todos los títulos
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 500; // grosor medio
+  line-height: 1.2; // altura de cada línea de texto (espacio entre líneas)
+  color: $negro; // color del texto (negro)
 }
 
-.heading--xl {
-  font-size: 2.25rem;
+.heading--xl { // título extra grande (el h1)
+  font-size: 2.25rem; // tamaño de la letra
 
-  @media (min-width: 768px) {
-    font-size: 3.5rem;
+  @media (min-width: 768px) { // desde 768px de ancho en adelante (pantallas más grandes)
+    font-size: 3.5rem; // tamaño de la letra
   }
 }
 
-.heading--lg {
-  margin-bottom: 1rem;
-  font-size: 2rem;
+.heading--lg { // título grande (h2 de las secciones)
+  margin-bottom: 1rem; // espacio de afuera abajo
+  font-size: 2rem; // tamaño de la letra
 
-  @media (min-width: 768px) {
-    font-size: 2.5rem;
+  @media (min-width: 768px) { // desde 768px de ancho en adelante (pantallas más grandes)
+    font-size: 2.5rem; // tamaño de la letra
   }
 }
 
-.heading--md {
-  font-size: 1.5rem;
+.heading--md { // título mediano
+  font-size: 1.5rem; // tamaño de la letra
 }
 
-.heading--sm {
-  margin-bottom: 0.75rem;
-  font-size: 1.375rem;
+.heading--sm { // título pequeño
+  margin-bottom: 0.75rem; // espacio de afuera abajo
+  font-size: 1.375rem; // tamaño de la letra
 }
 
-.heading--light {
-  color: $blanco;
+.heading--light { // título en blanco (para fondos oscuros)
+  color: $blanco; // color del texto (blanco)
 }
 
 /* ===== Textos ===== */
-.text {
-  margin-bottom: 1.5rem;
+.text { // párrafos normales
+  margin-bottom: 1.5rem; // espacio de afuera abajo
 }
 
-.text--small {
-  font-size: 0.875rem;
+.text--small { // párrafo con letra pequeña
+  font-size: 0.875rem; // tamaño de la letra
 }
 
-.text--italic {
-  font-style: italic;
+.text--italic { // párrafo en cursiva
+  font-style: italic; // letra cursiva
 }
 
 /* ===== Contenedor (centra el contenido) ===== */
-.container {
-  width: 100%;
-  max-width: 75rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+.container { // caja que centra el contenido y limita su ancho
+  width: 100%; // ocupa todo el ancho disponible
+  max-width: 75rem; // ancho máximo (no se pasa de aquí)
+  margin-left: auto; // centra el elemento (con margin-right: auto)
+  margin-right: auto; // centra el elemento (con margin-left: auto)
+  padding-left: 1rem; // espacio de adentro a la izquierda
+  padding-right: 1rem; // espacio de adentro a la derecha
 
-  @media (min-width: 768px) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  @media (min-width: 768px) { // desde 768px de ancho en adelante (pantallas más grandes)
+    padding-left: 1.5rem; // espacio de adentro a la izquierda
+    padding-right: 1.5rem; // espacio de adentro a la derecha
   }
 }
 
-.container--narrow {
-  max-width: 62.5rem;
+.container--narrow { // versión más angosta del container
+  max-width: 62.5rem; // ancho máximo (no se pasa de aquí)
 }
 
 /* ===== Link para saltar al contenido ===== */
-.skip-link {
-  position: absolute;
-  left: 1rem;
-  top: -4rem;
-  z-index: 10;
-  padding: 0.5rem 1rem;
-  background: $blanco;
-  color: $naranja;
-  transition: top 0.25s ease;
+.skip-link { // link oculto "saltar al contenido" (para teclado/lector de pantalla)
+  position: absolute; // se posiciona libre respecto al contenedor relativo más cercano
+  left: 1rem; // distancia desde la izquierda
+  top: -4rem; // distancia desde arriba
+  z-index: 10; // qué tan arriba queda frente a otros elementos (capas)
+  padding: 0.5rem 1rem; // espacio de adentro (entre el borde y el contenido)
+  background: $blanco; // color de fondo (blanco)
+  color: $naranja; // color del texto (naranja)
+  transition: top 0.25s ease; // anima el cambio suave de estas propiedades
 
-  &:focus {
-    top: 1rem;
+  &:focus { // cuando recibe el foco
+    top: 1rem; // distancia desde arriba
   }
 }
 
 /* ===== Botones del header y del masthead ===== */
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 1.5rem;
-  font-family: $fuente-lexend;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.4;
-  text-decoration: none;
-  border: 1px solid transparent;
-  transition: background-color 0.25s ease, transform 0.25s ease;
+.btn { // botones del header y del masthead
+  display: flex; // los hijos se acomodan en fila con flexbox
+  justify-content: center; // centra los hijos horizontalmente
+  align-items: center; // centra los hijos verticalmente
+  gap: 0.5rem; // espacio entre los hijos (en flex o grid)
+  padding: 0.875rem 1.5rem; // espacio de adentro (entre el borde y el contenido)
+  font-family: $fuente-lexend; // tipo de letra: Lexend (botones y menús)
+  font-size: 1rem; // tamaño de la letra
+  font-weight: 500; // grosor medio
+  line-height: 1.4; // altura de cada línea de texto (espacio entre líneas)
+  text-decoration: none; // quita el subrayado
+  border: 1px solid transparent; // borde completo (grosor, estilo, color)
+  transition: background-color 0.25s ease, transform 0.25s ease; // anima el cambio suave de estas propiedades
 
-  &:focus-visible {
-    outline: 3px solid $negro;
-    outline-offset: 3px;
+  &:focus-visible { // cuando se selecciona con el teclado (Tab)
+    outline: 3px solid $negro; // contorno visible (para accesibilidad con teclado)
+    outline-offset: 3px; // separación entre el elemento y su contorno
   }
 
-  &:hover {
-    transform: translateY(-2px);
+  &:hover { // cuando pasas el mouse encima
+    transform: translateY(-2px); // sube el elemento 2px
   }
 
-  &:active {
-    transform: translateY(0);
-  }
-}
-
-.btn--primary {
-  background: $naranja;
-  color: $blanco;
-
-  &:hover {
-    background: #a33a00;
+  &:active { // mientras se hace clic
+    transform: translateY(0); // lo devuelve a su posición
   }
 }
 
-.btn--light {
-  background: $blanco;
-  color: $naranja;
+.btn--primary { // botón naranja con letras blancas (Log in)
+  background: $naranja; // color de fondo (naranja)
+  color: $blanco; // color del texto (blanco)
 
-  &:hover {
-    background: $fondo-claro;
+  &:hover { // cuando pasas el mouse encima
+    background: #a33a00; // color de fondo
+  }
+}
+
+.btn--light { // botón blanco con letras naranjas (sobre fondo verde)
+  background: $blanco; // color de fondo (blanco)
+  color: $naranja; // color del texto (naranja)
+
+  &:hover { // cuando pasas el mouse encima
+    background: $fondo-claro; // color de fondo (blanco crema)
   }
 
-  &:focus-visible {
-    outline-color: $blanco;
+  &:focus-visible { // cuando se selecciona con el teclado (Tab)
+    outline-color: $blanco; // color del contorno
   }
 }
 
 /* ===== Menu de arriba (Individuals, Employer, Broker...) ===== */
-.utility-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  padding: 1rem 9rem;
+.utility-nav { // menú de arriba del todo (Individuals, Employer, Broker...)
+  display: flex; // los hijos se acomodan en fila con flexbox
+  justify-content: space-between; // separa los hijos: uno a cada extremo y el resto en medio
+  align-items: center; // centra los hijos verticalmente
+  gap: 2rem; // espacio entre los hijos (en flex o grid)
+  padding: 1rem 9rem; // espacio de adentro (entre el borde y el contenido)
 
-  @media (max-width: 1024px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  @media (max-width: 1024px) { // cuando la pantalla mide 1024px o menos (tablet/celular)
+    padding-left: 2rem; // espacio de adentro a la izquierda
+    padding-right: 2rem; // espacio de adentro a la derecha
   }
 
-  @media (max-width: 600px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-.utility-nav__list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.utility-nav__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: $fuente-lexend;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.4;
-  color: $negro-puro;
-  text-decoration: none;
-
-  &:focus-visible {
-    outline: 3px solid $negro;
-    outline-offset: 3px;
+  @media (max-width: 600px) { // cuando la pantalla mide 600px o menos (tablet/celular)
+    padding-left: 1rem; // espacio de adentro a la izquierda
+    padding-right: 1rem; // espacio de adentro a la derecha
   }
 }
 
-.utility-nav__link--current {
-  padding-bottom: 4px;
-  border-bottom: 1px solid $naranja;
+.utility-nav__list { // lista de links del menú de arriba
+  display: flex; // los hijos se acomodan en fila con flexbox
+  justify-content: flex-start; // hijos pegados al inicio (izquierda)
+  align-items: center; // centra los hijos verticalmente
+  gap: 1.5rem; // espacio entre los hijos (en flex o grid)
+  flex-wrap: wrap; // si no caben, pasan a la siguiente línea
+}
+
+.utility-nav__link { // cada link del menú de arriba
+  display: inline-flex; // flexbox pero en línea (ocupa solo lo que mide su contenido)
+  align-items: center; // centra los hijos verticalmente
+  gap: 0.5rem; // espacio entre los hijos (en flex o grid)
+  font-family: $fuente-lexend; // tipo de letra: Lexend (botones y menús)
+  font-size: 1rem; // tamaño de la letra
+  font-weight: 500; // grosor medio
+  line-height: 1.4; // altura de cada línea de texto (espacio entre líneas)
+  color: $negro-puro; // color del texto (negro puro)
+  text-decoration: none; // quita el subrayado
+
+  
+}
+
+.utility-nav__link--current { // el link de la página actual (con línea naranja abajo)
+  padding-bottom: 4px; // espacio de adentro abajo
+  border-bottom: 1px solid $naranja; // borde solo abajo
 }
 
 /* ===== Menu principal con el logo y el boton Log in ===== */
-.main-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  padding: 1rem 9rem;
-  border-bottom: 1px solid $gris-borde;
+.main-nav { // menú principal con logo y botón Log in
+  display: flex; // los hijos se acomodan en fila con flexbox
+  justify-content: space-between; // separa los hijos: uno a cada extremo y el resto en medio
+  align-items: center; // centra los hijos verticalmente
+  gap: 2rem; // espacio entre los hijos (en flex o grid)
+  padding: 1rem 9rem; // espacio de adentro (entre el borde y el contenido)
+  border-bottom: 1px solid $gris-borde; // borde solo abajo
 
-  @media (max-width: 1024px) {
-    flex-wrap: wrap;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  @media (max-width: 1024px) { // cuando la pantalla mide 1024px o menos (tablet/celular)
+    flex-wrap: wrap; // si no caben, pasan a la siguiente línea
+    padding-left: 2rem; // espacio de adentro a la izquierda
+    padding-right: 2rem; // espacio de adentro a la derecha
   }
 
-  @media (max-width: 600px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-.main-nav__menu {
-  flex: 1;
-
-  @media (max-width: 1024px) {
-    order: 3;
-    flex-basis: 100%;
+  @media (max-width: 600px) { // cuando la pantalla mide 600px o menos (tablet/celular)
+    padding-left: 1rem; // espacio de adentro a la izquierda
+    padding-right: 1rem; // espacio de adentro a la derecha
   }
 }
 
-.main-nav__list {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+.main-nav__menu { // contenedor de los links del menú principal
+  flex: 1; // ocupa todo el espacio libre que sobre
 
-  @media (max-width: 1024px) {
-    justify-content: flex-start;
-    gap: 1rem 1.5rem;
+  @media (max-width: 1024px) { // cuando la pantalla mide 1024px o menos (tablet/celular)
+    order: 3; // cambia el orden visual (3 = va al final)
+    flex-basis: 100%; // ancho base del elemento dentro del flex
   }
 }
 
-.main-nav__link {
-  font-family: $fuente-lexend;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.4;
-  color: $naranja;
-  text-decoration: none;
+.main-nav__list { // lista de links del menú principal
+  display: flex; // los hijos se acomodan en fila con flexbox
+  justify-content: flex-end; // hijos pegados al final (derecha)
+  align-items: center; // centra los hijos verticalmente
+  gap: 2rem; // espacio entre los hijos (en flex o grid)
+  flex-wrap: wrap; // si no caben, pasan a la siguiente línea
 
-  &:focus-visible {
-    outline: 3px solid $negro;
-    outline-offset: 3px;
+  @media (max-width: 1024px) { // cuando la pantalla mide 1024px o menos (tablet/celular)
+    justify-content: flex-start; // hijos pegados al inicio (izquierda)
+    gap: 1rem 1.5rem; // espacio entre los hijos (en flex o grid)
+  }
+}
+
+.main-nav__link { // cada link del menú principal
+  font-family: $fuente-lexend; // tipo de letra: Lexend (botones y menús)
+  font-size: 1rem; // tamaño de la letra
+  font-weight: 500; // grosor medio
+  line-height: 1.4; // altura de cada línea de texto (espacio entre líneas)
+  color: $naranja; // color del texto (naranja)
+  text-decoration: none; // quita el subrayado
+
+  &:focus-visible { // cuando se selecciona con el teclado (Tab)
+    outline: 3px solid $negro; // contorno visible (para accesibilidad con teclado)
+    outline-offset: 3px; // separación entre el elemento y su contorno
   }
 
-  &:hover {
-    text-decoration: underline;
+  &:hover { // cuando pasas el mouse encima
+    text-decoration: underline; // pone subrayado
   }
 }
 
 /* ===== Footer ===== */
-.footer {
-  border-top: 1px solid $verde-oscuro;
-  background: $blanco;
+.footer { // todo el footer
+  border-top: 1px solid $verde-oscuro; // borde solo arriba
+  background: $blanco; // color de fondo (blanco)
 }
 
-.footer__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  padding-block: 3rem 2rem;
+.footer__grid { // cuadrícula de columnas del footer
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  grid-template-columns: 1fr; // define las columnas del grid (1fr = una parte del espacio)
+  gap: 2rem; // espacio entre los hijos (en flex o grid)
+  padding-block: 3rem 2rem; // espacio de adentro arriba y abajo (si hay dos valores: arriba y abajo)
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media (min-width: 768px) { // desde 768px de ancho en adelante (pantallas más grandes)
+    grid-template-columns: repeat(2, 1fr); // define las columnas del grid (1fr = una parte del espacio)
   }
 
-  @media (min-width: 1200px) {
-    grid-template-columns: 25rem 18.75rem 18.75rem 1fr;
-    gap: 0;
-  }
-}
-
-.footer__logo-img {
-  height: 2.75rem;
-  width: auto;
-  margin-bottom: 1rem;
-}
-
-.footer__label {
-  margin-top: 1rem;
-  font-family: $fuente-titulos;
-  font-weight: 600;
-  font-size: 0.875rem;
-}
-
-.footer__text {
-  font-size: 0.875rem;
-  font-style: normal;
-  line-height: 1.6;
-}
-
-.footer__contact-link {
-  display: block;
-  font-size: 0.875rem;
-  line-height: 1.6;
-}
-
-.footer__heading {
-  font-family: $fuente-titulos;
-  font-weight: 500;
-  font-size: 0.875rem;
-}
-
-.footer__list {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.footer__link {
-  font-family: $fuente-titulos;
-  font-weight: 500;
-  font-size: 0.875rem;
-  color: $naranja;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
+  @media (min-width: 1200px) { // desde 1200px de ancho en adelante (pantallas más grandes)
+    grid-template-columns: 25rem 18.75rem 18.75rem 1fr; // define las columnas del grid (1fr = una parte del espacio)
+    gap: 0; // espacio entre los hijos (en flex o grid)
   }
 }
 
-.footer__bottom {
-  border-top: 1px solid $gris-borde;
+.footer__logo-img { // logo del footer
+  height: 2.75rem; // alto del elemento
+  width: auto; // ancho automático
+  margin-bottom: 1rem; // espacio de afuera abajo
 }
 
-.footer__bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem 2rem;
-  flex-wrap: wrap;
-  padding-block: 1.5rem;
-  font-size: 0.875rem;
+.footer__label { // etiquetas pequeñas del footer (Address, Phone...)
+  margin-top: 1rem; // espacio de afuera arriba
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 600; // grosor seminegrita
+  font-size: 0.875rem; // tamaño de la letra
 }
 
-.footer__legal {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem 1.5rem;
+.footer__text { // textos del footer
+  font-size: 0.875rem; // tamaño de la letra
+  font-style: normal; // letra normal (sin cursiva)
+  line-height: 1.6; // altura de cada línea de texto (espacio entre líneas)
 }
 
-.footer__legal-link {
-  text-decoration: underline;
+.footer__contact-link { // links de contacto del footer (teléfono, mail)
+  display: block; // ocupa todo el ancho, como un bloque
+  font-size: 0.875rem; // tamaño de la letra
+  line-height: 1.6; // altura de cada línea de texto (espacio entre líneas)
 }
 
-.footer__social {
-  display: flex;
-  gap: 1.5rem;
+.footer__heading { // títulos de las columnas del footer
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 500; // grosor medio
+  font-size: 0.875rem; // tamaño de la letra
 }
 
-.footer__social-link {
-  display: block;
-  color: $negro;
+.footer__list { // listas de links del footer
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  gap: 1rem; // espacio entre los hijos (en flex o grid)
+  margin-top: 1rem; // espacio de afuera arriba
+}
+
+.footer__link { // cada link del footer
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 500; // grosor medio
+  font-size: 0.875rem; // tamaño de la letra
+  color: $naranja; // color del texto (naranja)
+  text-decoration: none; // quita el subrayado
+
+  &:hover { // cuando pasas el mouse encima
+    text-decoration: underline; // pone subrayado
+  }
+}
+
+.footer__bottom { // franja de abajo del footer
+  border-top: 1px solid $gris-borde; // borde solo arriba
+}
+
+.footer__bar { // barra inferior (copyright, legal y redes)
+  display: flex; // los hijos se acomodan en fila con flexbox
+  flex-direction: row; // los hijos van en fila (horizontal)
+  justify-content: space-between; // separa los hijos: uno a cada extremo y el resto en medio
+  align-items: center; // centra los hijos verticalmente
+  gap: 1rem 2rem; // espacio entre los hijos (en flex o grid)
+  flex-wrap: wrap; // si no caben, pasan a la siguiente línea
+  padding-block: 1.5rem; // espacio de adentro arriba y abajo (si hay dos valores: arriba y abajo)
+  font-size: 0.875rem; // tamaño de la letra
+}
+
+.footer__legal { // links legales (privacidad, términos)
+  display: flex; // los hijos se acomodan en fila con flexbox
+  flex-wrap: wrap; // si no caben, pasan a la siguiente línea
+  align-items: center; // centra los hijos verticalmente
+  gap: 0.5rem 1.5rem; // espacio entre los hijos (en flex o grid)
+}
+
+.footer__legal-link { // cada link legal
+  text-decoration: underline; // pone subrayado
+}
+
+.footer__social { // iconos de redes sociales
+  display: flex; // los hijos se acomodan en fila con flexbox
+  gap: 1.5rem; // espacio entre los hijos (en flex o grid)
+}
+
+.footer__social-link { // cada icono de red social
+  display: block; // ocupa todo el ancho, como un bloque
+  color: $negro; // color del texto (negro)
 }
 
 /* ===== Articulo ===== */
-.article {
-  padding-block: 4rem 4rem;
+.article { // sección principal del artículo
+  padding-block: 4rem 4rem; // espacio de adentro arriba y abajo (si hay dos valores: arriba y abajo)
 
-  @media (min-width: 768px) {
-    padding-block: 5rem 4rem;
+  @media (min-width: 768px) { // desde 768px de ancho en adelante (pantallas más grandes)
+    padding-block: 5rem 4rem; // espacio de adentro arriba y abajo (si hay dos valores: arriba y abajo)
   }
 }
 
-.article__block {
-  margin-top: 4rem;
+.article__block { // cada bloque dentro del artículo
+  margin-top: 4rem; // espacio de afuera arriba
 
-  &:first-child {
-    margin-top: 0;
+  &:first-child { // si es el primer hijo de su contenedor
+    margin-top: 0; // espacio de afuera arriba
   }
 }
 
-.article__updated {
-  margin-top: 3rem;
-  font-size: 0.875rem;
-  font-style: italic;
+.article__updated { // texto de "última actualización"
+  margin-top: 3rem; // espacio de afuera arriba
+  font-size: 0.875rem; // tamaño de la letra
+  font-style: italic; // letra cursiva
 }
 
 /* ===== Iconos ===== */
-.icon {
-  flex-shrink: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.icon { // base de todos los iconos svg
+  flex-shrink: 0; // no se encoge aunque falte espacio
+  width: 1.25rem; // ancho del elemento
+  height: 1.25rem; // alto del elemento
+  fill: none; // sin relleno (solo líneas)
+  stroke: currentColor; // la línea del icono usa el color del texto
+  stroke-width: 2; // grosor de la línea del icono
+  stroke-linecap: round; // puntas de las líneas redondeadas
+  stroke-linejoin: round; // uniones de las líneas redondeadas
 }
 
-.icon--xs {
-  width: 0.75rem;
-  height: 0.75rem;
+.icon--xs { // icono extra pequeño
+  width: 0.75rem; // ancho del elemento
+  height: 0.75rem; // alto del elemento
 }
 
-.icon--sm {
-  width: 1rem;
-  height: 1rem;
+.icon--sm { // icono pequeño
+  width: 1rem; // ancho del elemento
+  height: 1rem; // alto del elemento
 }
 
-.icon--solid {
-  fill: currentColor;
-  stroke: none;
+.icon--solid { // icono relleno (no solo líneas)
+  fill: currentColor; // el icono se rellena del color del texto
+  stroke: none; // sin línea
 }
 
 /* ===== Sprite de iconos (esta escondido) ===== */
-.icon-sprite {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
+.icon-sprite { // svg escondido que guarda todos los iconos
+  position: absolute; // se posiciona libre respecto al contenedor relativo más cercano
+  width: 0; // ancho del elemento
+  height: 0; // alto del elemento
+  overflow: hidden; // esconde lo que se sale del elemento
 }
 
 /* ===== Links ===== */
-.link {
-  font-family: $fuente-titulos;
-  font-weight: 500;
-  color: $naranja;
-  text-decoration: none;
+.link { // links naranjas del contenido
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 500; // grosor medio
+  color: $naranja; // color del texto (naranja)
+  text-decoration: none; // quita el subrayado
 
-  &:hover {
-    text-decoration: underline;
+  &:hover { // cuando pasas el mouse encima
+    text-decoration: underline; // pone subrayado
   }
 }
 
-.link--large {
-  font-size: 1.125rem;
+.link--large { // link con letra más grande
+  font-size: 1.125rem; // tamaño de la letra
 }
 
-.link--icon {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  font-size: 1rem;
+.link--icon { // link con un icono al lado
+  display: inline-flex; // flexbox pero en línea (ocupa solo lo que mide su contenido)
+  align-items: center; // centra los hijos verticalmente
+  gap: 0.5rem; // espacio entre los hijos (en flex o grid)
+  font-weight: 600; // grosor seminegrita
+  font-size: 1rem; // tamaño de la letra
 }
 
-.link__icon {
-  display: inline-block;
-  margin-left: 0.5rem;
-  vertical-align: -0.2em;
+.link__icon { // el icono dentro del link
+  display: inline-block; // en línea pero acepta ancho/alto y márgenes
+  margin-left: 0.5rem; // espacio de afuera a la izquierda
+  vertical-align: -0.2em; // ajusta la altura del icono respecto al texto
 }
 
 /* ===== Boton normal ===== */
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  min-height: 3.125rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  background: $naranja;
-  font-family: $fuente-titulos;
-  font-weight: 500;
-  font-size: 1rem;
-  color: $blanco;
-  text-decoration: none;
+.button { // botón normal naranja
+  display: inline-flex; // flexbox pero en línea (ocupa solo lo que mide su contenido)
+  align-items: center; // centra los hijos verticalmente
+  justify-content: center; // centra los hijos horizontalmente
+  gap: 0.5rem; // espacio entre los hijos (en flex o grid)
+  min-height: 3.125rem; // alto mínimo
+  padding: 0.75rem 1.5rem; // espacio de adentro (entre el borde y el contenido)
+  border-radius: 6px; // bordes redondeados
+  background: $naranja; // color de fondo (naranja)
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 500; // grosor medio
+  font-size: 1rem; // tamaño de la letra
+  color: $blanco; // color del texto (blanco)
+  text-decoration: none; // quita el subrayado
 
-  &:hover {
-    background: #a83c00;
+  &:hover { // cuando pasas el mouse encima
+    background: #a83c00; // color de fondo
   }
 }
 
-.button--light {
-  background: $blanco;
-  color: $naranja;
+.button--light { // botón blanco (para fondos de color)
+  background: $blanco; // color de fondo (blanco)
+  color: $naranja; // color del texto (naranja)
 
-  &:hover {
-    background: $verde-claro;
+  &:hover { // cuando pasas el mouse encima
+    background: $verde-claro; // color de fondo (verde muy suave)
   }
 }
 
 /* ===== Figuras decorativas ===== */
-.shape {
-  display: block;
-  aspect-ratio: 1/1;
-  border: 2px solid transparent;
+.shape { // base de las figuras decorativas (cuadrados)
+  display: block; // ocupa todo el ancho, como un bloque
+  aspect-ratio: 1/1; // proporción ancho/alto (1/1 = cuadrado, 16/9 = panorámico)
+  border: 2px solid transparent; // borde completo (grosor, estilo, color)
 }
 
-.shape--yellow {
-  background: $amarillo;
+.shape--yellow { // figura amarilla
+  background: $amarillo; // color de fondo (amarillo)
 }
 
-.shape--lime {
-  background: $lima;
+.shape--lime { // figura verde lima
+  background: $lima; // color de fondo (verde lima)
 }
 
-.shape--green {
-  background: $verde;
+.shape--green { // figura verde
+  background: $verde; // color de fondo (verde)
 }
 
-.shape--outline-green {
-  border-color: $verde;
+.shape--outline-green { // figura solo con borde verde
+  border-color: $verde; // color del borde
 }
 
-.shape--outline-yellow {
-  border-color: $amarillo;
+.shape--outline-yellow { // figura solo con borde amarillo
+  border-color: $amarillo; // color del borde
 }
 
-.shape--outline-white {
-  border-color: $blanco;
+.shape--outline-white { // figura solo con borde blanco
+  border-color: $blanco; // color del borde
 }
 
-.shape--circle {
-  border-radius: 50%;
+.shape--circle { // figura en círculo
+  border-radius: 50%; // redondea cada esquina distinto (hoja/figura)
 }
 
-.shape--leaf-a {
-  border-radius: 50% 4px 50% 4px;
+.shape--leaf-a { // figura en forma de hoja (variante A)
+  border-radius: 50% 4px 50% 4px; // redondea cada esquina distinto (hoja/figura)
 }
 
-.shape--leaf-b {
-  border-radius: 4px 50% 4px 50%;
+.shape--leaf-b { // figura en forma de hoja (variante B)
+  border-radius: 4px 50% 4px 50%; // redondea cada esquina distinto (hoja/figura)
 }
 
-.shape--leaf-tl {
-  border-radius: 50% 4px 4px 4px;
+.shape--leaf-tl { // hoja con la esquina de arriba-izquierda redonda
+  border-radius: 50% 4px 4px 4px; // redondea cada esquina distinto (hoja/figura)
 }
 
-.shape--leaf-tr {
-  border-radius: 4px 50% 4px 4px;
+.shape--leaf-tr { // hoja con la esquina de arriba-derecha redonda
+  border-radius: 4px 50% 4px 4px; // redondea cada esquina distinto (hoja/figura)
 }
 
 /* ===== Figuras decorativas ===== */
-.shapes {
-  display: grid;
-  grid-template-columns: repeat(2, 7.5rem);
-  grid-auto-rows: 7.5rem;
-  gap: 0.75rem;
+.shapes { // grupo de figuras en cuadrícula de 2 columnas
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  grid-template-columns: repeat(2, 7.5rem); // define las columnas del grid (1fr = una parte del espacio)
+  grid-auto-rows: 7.5rem; // alto de las filas que se crean solas
+  gap: 0.75rem; // espacio entre los hijos (en flex o grid)
 }
 
 /* ===== Breadcrumb (Home > Resources > ...) ===== */
-.breadcrumbs__list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  font-family: $fuente-lexend;
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.3;
+.breadcrumbs__list { // lista del breadcrumb (Home > Resources > ...)
+  display: flex; // los hijos se acomodan en fila con flexbox
+  justify-content: flex-start; // hijos pegados al inicio (izquierda)
+  align-items: center; // centra los hijos verticalmente
+  gap: 0.5rem; // espacio entre los hijos (en flex o grid)
+  flex-wrap: wrap; // si no caben, pasan a la siguiente línea
+  font-family: $fuente-lexend; // tipo de letra: Lexend (botones y menús)
+  font-size: 0.875rem; // tamaño de la letra
+  font-weight: 500; // grosor medio
+  line-height: 1.3; // altura de cada línea de texto (espacio entre líneas)
 }
 
-.breadcrumbs__item:not(:last-child)::after {
-  content: "›";
-  margin-left: 0.5rem;
+.breadcrumbs__item:not(:last-child)::after { // agrega el signo › después de cada item menos el último
+  content: "›"; // carácter que se inserta (la flechita ›)
+  margin-left: 0.5rem; // espacio de afuera a la izquierda
 }
 
-.breadcrumbs__item:last-child {
-  font-family: $fuente-work;
-  font-weight: 400;
+.breadcrumbs__item:last-child { // el último item (la página actual)
+  font-family: $fuente-work; // tipo de letra: Work Sans (textos largos)
+  font-weight: 400; // grosor normal
 }
 
-.breadcrumbs__link {
-  color: $blanco;
+.breadcrumbs__link { // links del breadcrumb
+  color: $blanco; // color del texto (blanco)
 
-  &:focus-visible {
-    outline: 3px solid $blanco;
-    outline-offset: 3px;
+  &:focus-visible { // cuando se selecciona con el teclado (Tab)
+    outline: 3px solid $blanco; // contorno visible (para accesibilidad con teclado)
+    outline-offset: 3px; // separación entre el elemento y su contorno
   }
 
-  &:hover {
-    text-decoration: none;
+  &:hover { // cuando pasas el mouse encima
+    text-decoration: none; // quita el subrayado
   }
 }
 
 /* ===== Zona verde de arriba (masthead) ===== */
-.masthead {
-  position: relative;
-  overflow: hidden;
-  padding: 1.5rem 9rem 5rem;
-  background: $verde-oscuro;
-  color: $blanco;
+.masthead { // zona verde de arriba con el título principal
+  position: relative; // sirve de referencia para los hijos absolute
+  overflow: hidden; // esconde lo que se sale del elemento
+  padding: 1.5rem 9rem 5rem; // espacio de adentro (entre el borde y el contenido)
+  background: $verde-oscuro; // color de fondo (verde oscuro)
+  color: $blanco; // color del texto (blanco)
 
-  @media (max-width: 1024px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  @media (max-width: 1024px) { // cuando la pantalla mide 1024px o menos (tablet/celular)
+    padding-left: 2rem; // espacio de adentro a la izquierda
+    padding-right: 2rem; // espacio de adentro a la derecha
   }
 
-  @media (max-width: 600px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 4rem;
-  }
-}
-
-.masthead__content {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1.5rem;
-  flex-direction: column;
-  max-width: 59.5rem;
-  padding: 4rem 0 0 5rem;
-
-  @media (max-width: 1024px) {
-    padding-left: 0;
-  }
-
-  @media (max-width: 600px) {
-    padding-top: 2rem;
+  @media (max-width: 600px) { // cuando la pantalla mide 600px o menos (tablet/celular)
+    padding-left: 1rem; // espacio de adentro a la izquierda
+    padding-right: 1rem; // espacio de adentro a la derecha
+    padding-bottom: 4rem; // espacio de adentro abajo
   }
 }
 
-.masthead__title {
-  font-family: $fuente-lexend;
-  font-weight: 500;
-  font-size: 3.5rem;
-  line-height: 4.5rem;
-  color: $blanco;
+.masthead__content { // caja con el texto del masthead
+  display: flex; // los hijos se acomodan en fila con flexbox
+  justify-content: flex-start; // hijos pegados al inicio (izquierda)
+  align-items: flex-start; // hijos pegados arriba
+  gap: 1.5rem; // espacio entre los hijos (en flex o grid)
+  flex-direction: column; // los hijos se apilan en columna (vertical)
+  max-width: 59.5rem; // ancho máximo (no se pasa de aquí)
+  padding: 4rem 0 0 5rem; // espacio de adentro (entre el borde y el contenido)
 
-  @media (max-width: 1024px) {
-    font-size: 2.5rem;
-    line-height: 3.25rem;
+  @media (max-width: 1024px) { // cuando la pantalla mide 1024px o menos (tablet/celular)
+    padding-left: 0; // espacio de adentro a la izquierda
   }
 
-  @media (max-width: 600px) {
-    font-size: 2rem;
-    line-height: 2.5rem;
+  @media (max-width: 600px) { // cuando la pantalla mide 600px o menos (tablet/celular)
+    padding-top: 2rem; // espacio de adentro arriba
   }
 }
 
-.masthead__desc {
-  font-family: $fuente-work;
-  font-size: 1.125rem;
-  line-height: 1.55;
-  color: $fondo-claro;
-}
+.masthead__title { // título grande del masthead
+  font-family: $fuente-lexend; // tipo de letra: Lexend (botones y menús)
+  font-weight: 500; // grosor medio
+  font-size: 3.5rem; // tamaño de la letra
+  line-height: 4.5rem; // altura de cada línea de texto (espacio entre líneas)
+  color: $blanco; // color del texto (blanco)
 
-.masthead__pattern {
-  position: absolute;
-  top: -60px;
-  right: 12px;
-  display: grid;
-  grid-template-columns: repeat(2, 120px);
-  gap: 12px;
-  pointer-events: none;
-
-  @media (max-width: 1024px) {
-    opacity: 0.4;
+  @media (max-width: 1024px) { // cuando la pantalla mide 1024px o menos (tablet/celular)
+    font-size: 2.5rem; // tamaño de la letra
+    line-height: 3.25rem; // altura de cada línea de texto (espacio entre líneas)
   }
 
-  @media (max-width: 600px) {
-    display: none;
+  @media (max-width: 600px) { // cuando la pantalla mide 600px o menos (tablet/celular)
+    font-size: 2rem; // tamaño de la letra
+    line-height: 2.5rem; // altura de cada línea de texto (espacio entre líneas)
+  }
+}
+
+.masthead__desc { // descripción debajo del título
+  font-family: $fuente-work; // tipo de letra: Work Sans (textos largos)
+  font-size: 1.125rem; // tamaño de la letra
+  line-height: 1.55; // altura de cada línea de texto (espacio entre líneas)
+  color: $fondo-claro; // color del texto (blanco crema)
+}
+
+.masthead__pattern { // figuras decorativas de la derecha del masthead
+  position: absolute; // se posiciona libre respecto al contenedor relativo más cercano
+  top: -60px; // distancia desde arriba
+  right: 12px; // distancia desde la derecha
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  grid-template-columns: repeat(2, 120px); // define las columnas del grid (1fr = una parte del espacio)
+  gap: 12px; // espacio entre los hijos (en flex o grid)
+  pointer-events: none; // el mouse lo ignora (no se puede hacer clic)
+
+  @media (max-width: 1024px) { // cuando la pantalla mide 1024px o menos (tablet/celular)
+    opacity: 0.4; // transparencia (0.4 = 40% visible)
+  }
+
+  @media (max-width: 600px) { // cuando la pantalla mide 600px o menos (tablet/celular)
+    display: none; // oculta el elemento
   }
 }
 
 /* ===== Figuras del masthead ===== */
-.pattern-shape {
-  width: 120px;
-  height: 120px;
+.pattern-shape { // base de las figuras del masthead
+  width: 120px; // ancho del elemento
+  height: 120px; // alto del elemento
 }
 
-.pattern-shape--circle {
-  border-radius: 50%;
-  background: $amarillo;
+.pattern-shape--circle { // círculo amarillo
+  border-radius: 50%; // redondea cada esquina distinto (hoja/figura)
+  background: $amarillo; // color de fondo (amarillo)
 }
 
-.pattern-shape--circle-outline {
-  border-radius: 50%;
-  border: 2px solid $amarillo;
+.pattern-shape--circle-outline { // círculo solo con borde amarillo
+  border-radius: 50%; // redondea cada esquina distinto (hoja/figura)
+  border: 2px solid $amarillo; // borde completo (grosor, estilo, color)
 }
 
-.pattern-shape--lemon-lime {
-  border-radius: 0 100% 0 100%;
-  background: $lima;
+.pattern-shape--lemon-lime { // figura de limón verde lima
+  border-radius: 0 100% 0 100%; // redondea cada esquina distinto (hoja/figura)
+  background: $lima; // color de fondo (verde lima)
 }
 
-.pattern-shape--lemon-green {
-  border-radius: 0 100% 0 100%;
-  background: $verde;
+.pattern-shape--lemon-green { // figura de limón verde
+  border-radius: 0 100% 0 100%; // redondea cada esquina distinto (hoja/figura)
+  background: $verde; // color de fondo (verde)
 }
 
-.pattern-shape--lemon-outline {
-  border-radius: 0 100% 0 100%;
-  border: 2px solid $verde;
+.pattern-shape--lemon-outline { // figura de limón solo con borde
+  border-radius: 0 100% 0 100%; // redondea cada esquina distinto (hoja/figura)
+  border: 2px solid $verde; // borde completo (grosor, estilo, color)
 }
 
 /* ===== Cuadro de key takeaways ===== */
-.callout {
-  padding: 1.5rem;
-  border: 1px solid $lima;
-  border-radius: 4px 2.5rem 4px 2.5rem;
+.callout { // cuadro de key takeaways (puntos clave)
+  padding: 1.5rem; // espacio de adentro (entre el borde y el contenido)
+  border: 1px solid $lima; // borde completo (grosor, estilo, color)
+  border-radius: 4px 2.5rem 4px 2.5rem; // redondea cada esquina distinto (hoja/figura)
 
-  @media (min-width: 768px) {
-    padding: 1.875rem;
+  @media (min-width: 768px) { // desde 768px de ancho en adelante (pantallas más grandes)
+    padding: 1.875rem; // espacio de adentro (entre el borde y el contenido)
   }
 }
 
-.callout__title {
-  margin-bottom: 0.75rem;
+.callout__title { // título del cuadro
+  margin-bottom: 0.75rem; // espacio de afuera abajo
 }
 
-.callout__text {
-  margin-bottom: 1rem;
+.callout__text { // texto del cuadro
+  margin-bottom: 1rem; // espacio de afuera abajo
 }
 
-.callout__list {
-  display: grid;
-  gap: 0.5rem;
+.callout__list { // lista del cuadro
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  gap: 0.5rem; // espacio entre los hijos (en flex o grid)
 }
 
-.callout__item {
-  position: relative;
-  padding-left: 2.25rem;
+.callout__item { // cada punto de la lista (con puntito verde)
+  position: relative; // sirve de referencia para los hijos absolute
+  padding-left: 2.25rem; // espacio de adentro a la izquierda
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0.7em;
-    left: 0.6rem;
-    width: 0.3rem;
-    height: 0.3rem;
-    border-radius: 50%;
-    background: $verde;
+  &::before { // pseudo-elemento que se dibuja antes del contenido (adorno)
+    content: ""; // texto/contenido que se inserta con el pseudo-elemento (vacío = solo decoración)
+    position: absolute; // se posiciona libre respecto al contenedor relativo más cercano
+    top: 0.7em; // distancia desde arriba
+    left: 0.6rem; // distancia desde la izquierda
+    width: 0.3rem; // ancho del elemento
+    height: 0.3rem; // alto del elemento
+    border-radius: 50%; // redondea cada esquina distinto (hoja/figura)
+    background: $verde; // color de fondo (verde)
   }
 }
 
 /* ===== Tabla ===== */
-.data-table {
-  overflow-x: auto;
-  border: 1px solid $gris-borde;
-  border-radius: 4px;
+.data-table { // caja que envuelve la tabla
+  overflow-x: auto; // scroll horizontal si el contenido no cabe
+  border: 1px solid $gris-borde; // borde completo (grosor, estilo, color)
+  border-radius: 4px; // bordes redondeados
 }
 
-.data-table__table {
-  width: 100%;
-  min-width: 28rem;
-  border-collapse: collapse;
-  font-size: 1rem;
+.data-table__table { // la tabla en sí
+  width: 100%; // ocupa todo el ancho disponible
+  min-width: 28rem; // ancho mínimo (no se hace más pequeño)
+  border-collapse: collapse; // une los bordes de las celdas en uno solo
+  font-size: 1rem; // tamaño de la letra
 }
 
-.data-table__head, .data-table__cell {
-  width: 50%;
-  padding: 0.75rem 1.5rem;
-  text-align: left;
+.data-table__head, .data-table__cell { // encabezados y celdas de la tabla (los dos juntos)
+  width: 50%; // ancho del elemento
+  padding: 0.75rem 1.5rem; // espacio de adentro (entre el borde y el contenido)
+  text-align: left; // alinea el texto a la izquierda
 }
 
-.data-table__head {
-  background: $verde-oscuro;
-  font-family: $fuente-titulos;
-  font-weight: 500;
-  color: $blanco;
+.data-table__head { // encabezados de la tabla (fila verde)
+  background: $verde-oscuro; // color de fondo (verde oscuro)
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 500; // grosor medio
+  color: $blanco; // color del texto (blanco)
 }
 
-.data-table__head + .data-table__head {
-  border-left: 1px solid $gris-borde;
+.data-table__head + .data-table__head { // un encabezado que va justo después de otro (línea entre ellos)
+  border-left: 1px solid $gris-borde; // borde solo a la izquierda
 }
 
-.data-table__cell {
-  border-top: 1px solid $gris-borde;
+.data-table__cell { // celdas normales de la tabla
+  border-top: 1px solid $gris-borde; // borde solo arriba
 }
 
 /* ===== Imagen y video ===== */
-.figure__link {
-  display: block;
-  overflow: hidden;
-  border-radius: 8px;
+.figure__link { // link que envuelve la imagen
+  display: block; // ocupa todo el ancho, como un bloque
+  overflow: hidden; // esconde lo que se sale del elemento
+  border-radius: 8px; // bordes redondeados
 }
 
-.figure__image {
-  width: 100%;
-  aspect-ratio: 16/9;
-  -o-object-fit: cover;
-  object-fit: cover;
+.figure__image { // la imagen
+  width: 100%; // ocupa todo el ancho disponible
+  aspect-ratio: 16/9; // proporción ancho/alto (1/1 = cuadrado, 16/9 = panorámico)
+  -o-object-fit: cover; // la imagen rellena su caja recortando lo que sobre (versión para Opera antiguo)
+  object-fit: cover; // la imagen rellena su caja recortando lo que sobre
 }
 
-.figure__caption {
-  margin-top: 1.5rem;
-  font-size: 0.875rem;
+.figure__caption { // texto debajo de la imagen
+  margin-top: 1.5rem; // espacio de afuera arriba
+  font-size: 0.875rem; // tamaño de la letra
 }
 
 /* ===== Preguntas frecuentes (FAQ) ===== */
-.accordion {
-  border-top: 2px solid $gris-claro;
+.accordion { // lista de preguntas frecuentes (FAQ)
+  border-top: 2px solid $gris-claro; // borde solo arriba
 }
 
-.accordion__item {
-  border-bottom: 2px solid $gris-claro;
+.accordion__item { // cada pregunta con su respuesta
+  border-bottom: 2px solid $gris-claro; // borde solo abajo
 }
 
-.accordion__summary {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.25rem 1rem;
-  font-family: $fuente-titulos;
-  font-weight: 500;
-  font-size: 1.125rem;
-  line-height: 1.4;
-  color: $naranja;
-  list-style: none;
-  cursor: pointer;
+.accordion__summary { // la pregunta (lo que se ve cerrado)
+  display: flex; // los hijos se acomodan en fila con flexbox
+  flex-direction: row; // los hijos van en fila (horizontal)
+  justify-content: space-between; // separa los hijos: uno a cada extremo y el resto en medio
+  align-items: center; // centra los hijos verticalmente
+  gap: 1rem; // espacio entre los hijos (en flex o grid)
+  padding: 1.25rem 1rem; // espacio de adentro (entre el borde y el contenido)
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 500; // grosor medio
+  font-size: 1.125rem; // tamaño de la letra
+  line-height: 1.4; // altura de cada línea de texto (espacio entre líneas)
+  color: $naranja; // color del texto (naranja)
+  list-style: none; // quita las viñetas de la lista
+  cursor: pointer; // cursor de manito al pasar el mouse
 
-  @media (min-width: 768px) {
-    font-size: 1.25rem;
+  @media (min-width: 768px) { // desde 768px de ancho en adelante (pantallas más grandes)
+    font-size: 1.25rem; // tamaño de la letra
   }
 
-  &::-webkit-details-marker {
-    display: none;
+  &::-webkit-details-marker { // la flechita por defecto de <details> en Chrome/Safari
+    display: none; // oculta el elemento
   }
 }
 
-.accordion__icon--minus {
-  display: none;
+.accordion__icon--minus { // icono de menos (escondido al inicio)
+  display: none; // oculta el elemento
 }
 
-.accordion__item[open] .accordion__icon--minus {
-  display: block;
+.accordion__item[open] .accordion__icon--minus { // cuando la pregunta está abierta, se muestra el menos
+  display: block; // ocupa todo el ancho, como un bloque
 }
 
-.accordion__item[open] .accordion__icon--plus {
-  display: none;
+.accordion__item[open] .accordion__icon--plus { // cuando la pregunta está abierta, se esconde el más
+  display: none; // oculta el elemento
 }
 
-.accordion__body {
-  padding: 0 1rem 1.5rem;
+.accordion__body { // la respuesta de la pregunta
+  padding: 0 1rem 1.5rem; // espacio de adentro (entre el borde y el contenido)
 }
 
 /* ===== Lista de recursos ===== */
-.resource-list {
-  display: grid;
-  gap: 1.5rem 3rem;
-  margin-bottom: 2rem;
+.resource-list { // lista de recursos en 2 columnas
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  gap: 1.5rem 3rem; // espacio entre los hijos (en flex o grid)
+  margin-bottom: 2rem; // espacio de afuera abajo
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media (min-width: 768px) { // desde 768px de ancho en adelante (pantallas más grandes)
+    grid-template-columns: repeat(2, 1fr); // define las columnas del grid (1fr = una parte del espacio)
   }
 }
 
-.resource-list__column {
-  display: grid;
-  gap: 1.5rem;
-  align-content: start;
+.resource-list__column { // cada columna de la lista de recursos
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  gap: 1.5rem; // espacio entre los hijos (en flex o grid)
+  align-content: start; // las filas del grid se pegan arriba (start)
 }
 
 /* ===== Quiz ===== */
-.quiz {
-  display: grid;
-  gap: 1.5rem;
+.quiz { // contenedor de las tarjetas del quiz
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  gap: 1.5rem; // espacio entre los hijos (en flex o grid)
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media (min-width: 768px) { // desde 768px de ancho en adelante (pantallas más grandes)
+    grid-template-columns: repeat(2, 1fr); // define las columnas del grid (1fr = una parte del espacio)
   }
 }
 
 /* ===== Tarjetas del quiz ===== */
-.quiz-card {
-  position: relative;
-  display: grid;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+.quiz-card { // tarjeta del quiz (se voltea)
+  position: relative; // sirve de referencia para los hijos absolute
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  overflow: hidden; // esconde lo que se sale del elemento
+  border-radius: 8px; // bordes redondeados
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); // sombra alrededor del elemento
 }
 
-.quiz-card__toggle {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  border: 0;
-  white-space: nowrap;
+.quiz-card__toggle { // checkbox escondido que controla el volteo
+  position: absolute; // se posiciona libre respecto al contenedor relativo más cercano
+  width: 1px; // ancho del elemento
+  height: 1px; // alto del elemento
+  margin: -1px; // espacio de afuera del elemento
+  padding: 0; // quita el espacio de adentro
+  overflow: hidden; // esconde lo que se sale del elemento
+  clip: rect(0 0 0 0); // recorta todo para que no se vea (truco de accesibilidad)
+  border: 0; // borde completo (grosor, estilo, color)
+  white-space: nowrap; // el texto no se parte en varias líneas
 }
 
-.quiz-card__face {
-  grid-area: 1/1;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  background: $blanco;
+.quiz-card__face { // cada cara de la tarjeta
+  grid-area: 1/1; // todos los hijos ocupan la misma celda (quedan apilados)
+  display: flex; // los hijos se acomodan en fila con flexbox
+  flex-direction: column; // los hijos se apilan en columna (vertical)
+  padding: 2rem; // espacio de adentro (entre el borde y el contenido)
+  background: $blanco; // color de fondo (blanco)
 }
 
-.quiz-card__face--back {
-  position: relative;
-  background: $verde;
-  color: $blanco;
+.quiz-card__face--back { // la cara de atrás (verde, con la respuesta)
+  position: relative; // sirve de referencia para los hijos absolute
+  background: $verde; // color de fondo (verde)
+  color: $blanco; // color del texto (blanco)
 }
 
-.quiz-card__toggle:checked ~ .quiz-card__face--front {
-  visibility: hidden;
+.quiz-card__toggle:checked ~ .quiz-card__face--front { // si el checkbox está marcado, esconde la cara de adelante
+  visibility: hidden; // oculta pero sigue ocupando espacio
 }
 
-.quiz-card__toggle:not(:checked) ~ .quiz-card__face--back {
-  visibility: hidden;
+.quiz-card__toggle:not(:checked) ~ .quiz-card__face--back { // si NO está marcado, esconde la cara de atrás
+  visibility: hidden; // oculta pero sigue ocupando espacio
 }
 
-.quiz-card__toggle:focus-visible ~ .quiz-card__face {
-  outline: 3px solid $amarillo;
-  outline-offset: -3px;
+.quiz-card__toggle:focus-visible ~ .quiz-card__face { // contorno amarillo cuando se enfoca con el teclado
+  outline: 3px solid $amarillo; // contorno visible (para accesibilidad con teclado)
+  outline-offset: -3px; // separación entre el elemento y su contorno
 }
 
-.quiz-card__number {
-  font-family: $fuente-titulos;
-  font-weight: 600;
-  font-size: 0.875rem;
+.quiz-card__number { // número de la pregunta
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 600; // grosor seminegrita
+  font-size: 0.875rem; // tamaño de la letra
 }
 
-.quiz-card__question {
-  margin: 1rem 0 1.25rem;
-  font-family: $fuente-titulos;
-  font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.4;
-  color: $negro;
+.quiz-card__question { // texto de la pregunta
+  margin: 1rem 0 1.25rem; // espacio de afuera del elemento
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 500; // grosor medio
+  font-size: 1.25rem; // tamaño de la letra
+  line-height: 1.4; // altura de cada línea de texto (espacio entre líneas)
+  color: $negro; // color del texto (negro)
 }
 
-.quiz-card__answers {
-  display: grid;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+.quiz-card__answers { // lista de respuestas A, B, C
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  gap: 0.5rem; // espacio entre los hijos (en flex o grid)
+  margin-bottom: 1.5rem; // espacio de afuera abajo
 }
 
-.quiz-card__answer {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 1rem;
+.quiz-card__answer { // cada respuesta
+  display: flex; // los hijos se acomodan en fila con flexbox
+  flex-direction: row; // los hijos van en fila (horizontal)
+  justify-content: flex-start; // hijos pegados al inicio (izquierda)
+  align-items: center; // centra los hijos verticalmente
+  gap: 0.75rem; // espacio entre los hijos (en flex o grid)
+  font-size: 1rem; // tamaño de la letra
 }
 
-.quiz-card__letter {
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 4px;
-  background: $verde-claro;
-  font-family: $fuente-titulos;
-  font-weight: 600;
-  font-size: 0.875rem;
-  color: $verde;
+.quiz-card__letter { // cuadradito con la letra (A, B, C)
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  place-items: center; // centra el contenido en horizontal y vertical a la vez
+  flex-shrink: 0; // no se encoge aunque falte espacio
+  width: 1.5rem; // ancho del elemento
+  height: 1.5rem; // alto del elemento
+  border-radius: 4px; // bordes redondeados
+  background: $verde-claro; // color de fondo (verde muy suave)
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 600; // grosor seminegrita
+  font-size: 0.875rem; // tamaño de la letra
+  color: $verde; // color del texto (verde)
 }
 
-.quiz-card__letter--inverse {
-  background: rgba(255, 255, 255, 0.2);
-  color: $blanco;
+.quiz-card__letter--inverse { // letra con colores invertidos (para el fondo verde)
+  background: rgba(255, 255, 255, 0.2); // color de fondo
+  color: $blanco; // color del texto (blanco)
 }
 
-.quiz-card__result {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 1rem 0 1.25rem;
-  font-family: $fuente-titulos;
-  font-weight: 500;
-  font-size: 1.25rem;
+.quiz-card__result { // resultado (correcto/incorrecto) en la cara de atrás
+  display: flex; // los hijos se acomodan en fila con flexbox
+  flex-direction: row; // los hijos van en fila (horizontal)
+  justify-content: flex-start; // hijos pegados al inicio (izquierda)
+  align-items: center; // centra los hijos verticalmente
+  gap: 0.5rem; // espacio entre los hijos (en flex o grid)
+  margin: 1rem 0 1.25rem; // espacio de afuera del elemento
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 500; // grosor medio
+  font-size: 1.25rem; // tamaño de la letra
 }
 
-.quiz-card__explanation {
-  margin-bottom: 2rem;
-  font-size: 1rem;
-  line-height: 1.6;
+.quiz-card__explanation { // explicación de la respuesta
+  margin-bottom: 2rem; // espacio de afuera abajo
+  font-size: 1rem; // tamaño de la letra
+  line-height: 1.6; // altura de cada línea de texto (espacio entre líneas)
 }
 
-.quiz-card__flip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: auto;
-  font-family: $fuente-titulos;
-  font-weight: 500;
-  font-size: 1rem;
-  color: $naranja;
-  cursor: pointer;
+.quiz-card__flip { // botón para voltear la tarjeta
+  display: inline-flex; // flexbox pero en línea (ocupa solo lo que mide su contenido)
+  align-items: center; // centra los hijos verticalmente
+  gap: 0.5rem; // espacio entre los hijos (en flex o grid)
+  margin-top: auto; // espacio de afuera arriba
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 500; // grosor medio
+  font-size: 1rem; // tamaño de la letra
+  color: $naranja; // color del texto (naranja)
+  cursor: pointer; // cursor de manito al pasar el mouse
 
-  &:hover {
-    text-decoration: underline;
+  &:hover { // cuando pasas el mouse encima
+    text-decoration: underline; // pone subrayado
   }
 }
 
-.quiz-card__flip--light {
-  color: $blanco;
+.quiz-card__flip--light { // botón de voltear en blanco
+  color: $blanco; // color del texto (blanco)
 }
 
-.quiz-card__decor {
-  position: absolute;
-  right: 0.5rem;
-  bottom: 0.5rem;
-  display: grid;
-  grid-template-columns: repeat(2, 2.5rem);
-  gap: 0.25rem;
+.quiz-card__decor { // figuras decorativas de la esquina de la tarjeta
+  position: absolute; // se posiciona libre respecto al contenedor relativo más cercano
+  right: 0.5rem; // distancia desde la derecha
+  bottom: 0.5rem; // distancia desde abajo
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  grid-template-columns: repeat(2, 2.5rem); // define las columnas del grid (1fr = una parte del espacio)
+  gap: 0.25rem; // espacio entre los hijos (en flex o grid)
 }
 
-.quiz-card__decor-lime {
-  grid-column: 2;
+.quiz-card__decor-lime { // figura lima, va en la columna 2
+  grid-column: 2; // este elemento va en la columna 2
 }
 
 /* ===== Contacto ===== */
-.contact {
-  display: grid;
-  gap: 3rem 1.5rem;
+.contact { // sección de contacto en 2 columnas
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  gap: 3rem 1.5rem; // espacio entre los hijos (en flex o grid)
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media (min-width: 768px) { // desde 768px de ancho en adelante (pantallas más grandes)
+    grid-template-columns: repeat(2, 1fr); // define las columnas del grid (1fr = una parte del espacio)
   }
 }
 
 /* ===== Tarjetas de contacto ===== */
-.contact-card__subtitle {
-  margin: 1rem 0 1.5rem;
-  font-family: $fuente-titulos;
-  font-weight: 600;
-  font-size: 0.875rem;
+.contact-card__subtitle { // subtítulo de cada tarjeta de contacto
+  margin: 1rem 0 1.5rem; // espacio de afuera del elemento
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 600; // grosor seminegrita
+  font-size: 0.875rem; // tamaño de la letra
 }
 
-.contact-card__links {
-  display: grid;
-  gap: 1rem;
+.contact-card__links { // links de cada tarjeta de contacto
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  gap: 1rem; // espacio entre los hijos (en flex o grid)
 }
 
 /* ===== Related resources ===== */
-.related {
-  padding-block: 4rem;
-  border-block: 1px solid $gris-claro;
+.related { // sección de recursos relacionados
+  padding-block: 4rem; // espacio de adentro arriba y abajo (si hay dos valores: arriba y abajo)
+  border-block: 1px solid $gris-claro; // borde arriba y abajo a la vez
 
-  @media (min-width: 768px) {
-    padding-block: 5rem;
+  @media (min-width: 768px) { // desde 768px de ancho en adelante (pantallas más grandes)
+    padding-block: 5rem; // espacio de adentro arriba y abajo (si hay dos valores: arriba y abajo)
   }
 }
 
-.related__list {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 85%;
-  gap: 1.5rem;
-  padding: 0.5rem 0.25rem 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+.related__list { // lista de tarjetas (scroll horizontal en móvil)
+  display: grid; // los hijos se acomodan en una cuadrícula (grid)
+  grid-auto-flow: column; // los elementos nuevos se acomodan en columnas
+  grid-auto-columns: 85%; // ancho de las columnas que se crean solas
+  gap: 1.5rem; // espacio entre los hijos (en flex o grid)
+  padding: 0.5rem 0.25rem 1rem; // espacio de adentro (entre el borde y el contenido)
+  overflow-x: auto; // scroll horizontal si el contenido no cabe
+  scroll-snap-type: x mandatory; // al hacer scroll horizontal, se "pega" a cada tarjeta
 
-  @media (min-width: 1024px) {
-    grid-auto-flow: row;
-    grid-auto-columns: auto;
-    grid-template-columns: repeat(3, 1fr);
-    padding-left: 0;
-    padding-right: 0;
-    overflow: visible;
+  @media (min-width: 1024px) { // desde 1024px de ancho en adelante (pantallas más grandes)
+    grid-auto-flow: row; // los elementos nuevos se acomodan en columnas
+    grid-auto-columns: auto; // ancho de las columnas que se crean solas
+    grid-template-columns: repeat(3, 1fr); // define las columnas del grid (1fr = una parte del espacio)
+    padding-left: 0; // espacio de adentro a la izquierda
+    padding-right: 0; // espacio de adentro a la derecha
+    overflow: visible; // deja ver lo que se sale
   }
 }
 
 /* ===== Tarjetas de recursos ===== */
-.resource-card {
-  padding: 2rem;
-  background: $blanco;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-  scroll-snap-align: start;
+.resource-card { // tarjeta de recurso relacionado
+  padding: 2rem; // espacio de adentro (entre el borde y el contenido)
+  background: $blanco; // color de fondo (blanco)
+  border-radius: 8px; // bordes redondeados
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); // sombra alrededor del elemento
+  scroll-snap-align: start; // la tarjeta se alinea al inicio al hacer scroll
 }
 
-.resource-card__title {
-  display: block;
-  font-family: $fuente-titulos;
-  font-weight: 500;
-  font-size: 1.5rem;
-  line-height: 1.2;
-  color: $naranja;
-  text-decoration: none;
+.resource-card__title { // título de la tarjeta
+  display: block; // ocupa todo el ancho, como un bloque
+  font-family: $fuente-titulos; // tipo de letra: Helvetica Neue/Arial (la de títulos)
+  font-weight: 500; // grosor medio
+  font-size: 1.5rem; // tamaño de la letra
+  line-height: 1.2; // altura de cada línea de texto (espacio entre líneas)
+  color: $naranja; // color del texto (naranja)
+  text-decoration: none; // quita el subrayado
 
-  &:hover {
-    text-decoration: underline;
+  &:hover { // cuando pasas el mouse encima
+    text-decoration: underline; // pone subrayado
   }
 }
 
-.resource-card__text {
-  margin-top: 1rem;
-  font-size: 1rem;
-  line-height: 1.6;
+.resource-card__text { // texto de la tarjeta
+  margin-top: 1rem; // espacio de afuera arriba
+  font-size: 1rem; // tamaño de la letra
+  line-height: 1.6; // altura de cada línea de texto (espacio entre líneas)
 }
 
 /* ===== Paginador (los puntitos) ===== */
-.pager {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 1rem;
-  color: $naranja;
+.pager { // paginador (los puntitos)
+  display: flex; // los hijos se acomodan en fila con flexbox
+  flex-direction: row; // los hijos van en fila (horizontal)
+  justify-content: flex-end; // hijos pegados al final (derecha)
+  align-items: center; // centra los hijos verticalmente
+  gap: 0.75rem; // espacio entre los hijos (en flex o grid)
+  margin-top: 1rem; // espacio de afuera arriba
+  color: $naranja; // color del texto (naranja)
 }
 
-.pager__dot {
-  width: 0.75rem;
-  height: 0.75rem;
-  border: 2px solid $naranja;
-  border-radius: 50%;
+.pager__dot { // cada puntito
+  width: 0.75rem; // ancho del elemento
+  height: 0.75rem; // alto del elemento
+  border: 2px solid $naranja; // borde completo (grosor, estilo, color)
+  border-radius: 50%; // redondea cada esquina distinto (hoja/figura)
 }
 
-.pager__dot--active {
-  background: $naranja;
-}
+.pager__dot--active { // el puntito activo (relleno)
+  background: $naranja; // color de fondo (naranja)
+} 

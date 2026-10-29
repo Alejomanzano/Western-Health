@@ -1,4 +1,6 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@500&family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap");
+/* ===== Estilos generales ===== */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -36,6 +38,7 @@ a {
   outline-offset: 2px;
 }
 
+/* ===== Títulos ===== */
 .heading {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 500;
@@ -46,7 +49,6 @@ a {
 .heading--xl {
   font-size: 2.25rem;
 }
-
 @media (min-width: 768px) {
   .heading--xl {
     font-size: 3.5rem;
@@ -57,7 +59,6 @@ a {
   margin-bottom: 1rem;
   font-size: 2rem;
 }
-
 @media (min-width: 768px) {
   .heading--lg {
     font-size: 2.5rem;
@@ -77,6 +78,7 @@ a {
   color: #ffffff;
 }
 
+/* ===== Textos ===== */
 .text {
   margin-bottom: 1.5rem;
 }
@@ -89,6 +91,7 @@ a {
   font-style: italic;
 }
 
+/* ===== Contenedor (centra el contenido) ===== */
 .container {
   width: 100%;
   max-width: 75rem;
@@ -97,7 +100,6 @@ a {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
 @media (min-width: 768px) {
   .container {
     padding-left: 1.5rem;
@@ -109,6 +111,7 @@ a {
   max-width: 62.5rem;
 }
 
+/* ===== Link para saltar al contenido ===== */
 .skip-link {
   position: absolute;
   left: 1rem;
@@ -119,11 +122,11 @@ a {
   color: #c94900;
   transition: top 0.25s ease;
 }
-
 .skip-link:focus {
   top: 1rem;
 }
 
+/* ===== Botones del header y del masthead ===== */
 .btn {
   display: flex;
   justify-content: center;
@@ -138,16 +141,13 @@ a {
   border: 1px solid transparent;
   transition: background-color 0.25s ease, transform 0.25s ease;
 }
-
 .btn:focus-visible {
   outline: 3px solid #151313;
   outline-offset: 3px;
 }
-
 .btn:hover {
   transform: translateY(-2px);
 }
-
 .btn:active {
   transform: translateY(0);
 }
@@ -156,7 +156,6 @@ a {
   background: #c94900;
   color: #ffffff;
 }
-
 .btn--primary:hover {
   background: #a33a00;
 }
@@ -165,15 +164,14 @@ a {
   background: #ffffff;
   color: #c94900;
 }
-
 .btn--light:hover {
   background: #fcfbf9;
 }
-
 .btn--light:focus-visible {
   outline-color: #ffffff;
 }
 
+/* ===== Menu de arriba (Individuals, Employer, Broker...) ===== */
 .utility-nav {
   display: flex;
   justify-content: space-between;
@@ -181,14 +179,12 @@ a {
   gap: 2rem;
   padding: 1rem 9rem;
 }
-
 @media (max-width: 1024px) {
   .utility-nav {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 }
-
 @media (max-width: 600px) {
   .utility-nav {
     padding-left: 1rem;
@@ -216,16 +212,12 @@ a {
   text-decoration: none;
 }
 
-.utility-nav__link:focus-visible {
-  outline: 3px solid #151313;
-  outline-offset: 3px;
-}
-
 .utility-nav__link--current {
   padding-bottom: 4px;
   border-bottom: 1px solid #c94900;
 }
 
+/* ===== Menu principal con el logo y el boton Log in ===== */
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -234,7 +226,6 @@ a {
   padding: 1rem 9rem;
   border-bottom: 1px solid #d1d1cf;
 }
-
 @media (max-width: 1024px) {
   .main-nav {
     flex-wrap: wrap;
@@ -242,7 +233,6 @@ a {
     padding-right: 2rem;
   }
 }
-
 @media (max-width: 600px) {
   .main-nav {
     padding-left: 1rem;
@@ -253,7 +243,6 @@ a {
 .main-nav__menu {
   flex: 1;
 }
-
 @media (max-width: 1024px) {
   .main-nav__menu {
     order: 3;
@@ -268,7 +257,6 @@ a {
   gap: 2rem;
   flex-wrap: wrap;
 }
-
 @media (max-width: 1024px) {
   .main-nav__list {
     justify-content: flex-start;
@@ -284,16 +272,15 @@ a {
   color: #c94900;
   text-decoration: none;
 }
-
 .main-nav__link:focus-visible {
   outline: 3px solid #151313;
   outline-offset: 3px;
 }
-
 .main-nav__link:hover {
   text-decoration: underline;
 }
 
+/* ===== Footer ===== */
 .footer {
   border-top: 1px solid #10551f;
   background: #ffffff;
@@ -305,13 +292,11 @@ a {
   gap: 2rem;
   padding-block: 3rem 2rem;
 }
-
 @media (min-width: 768px) {
   .footer__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (min-width: 1200px) {
   .footer__grid {
     grid-template-columns: 25rem 18.75rem 18.75rem 1fr;
@@ -363,7 +348,6 @@ a {
   color: #c94900;
   text-decoration: none;
 }
-
 .footer__link:hover {
   text-decoration: underline;
 }
@@ -404,10 +388,10 @@ a {
   color: #151313;
 }
 
+/* ===== Articulo ===== */
 .article {
   padding-block: 4rem 4rem;
 }
-
 @media (min-width: 768px) {
   .article {
     padding-block: 5rem 4rem;
@@ -417,7 +401,6 @@ a {
 .article__block {
   margin-top: 4rem;
 }
-
 .article__block:first-child {
   margin-top: 0;
 }
@@ -428,6 +411,7 @@ a {
   font-style: italic;
 }
 
+/* ===== Iconos ===== */
 .icon {
   flex-shrink: 0;
   width: 1.25rem;
@@ -454,6 +438,7 @@ a {
   stroke: none;
 }
 
+/* ===== Sprite de iconos (esta escondido) ===== */
 .icon-sprite {
   position: absolute;
   width: 0;
@@ -461,13 +446,13 @@ a {
   overflow: hidden;
 }
 
+/* ===== Links ===== */
 .link {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 500;
   color: #c94900;
   text-decoration: none;
 }
-
 .link:hover {
   text-decoration: underline;
 }
@@ -490,6 +475,7 @@ a {
   vertical-align: -0.2em;
 }
 
+/* ===== Boton normal ===== */
 .button {
   display: inline-flex;
   align-items: center;
@@ -505,7 +491,6 @@ a {
   color: #ffffff;
   text-decoration: none;
 }
-
 .button:hover {
   background: #a83c00;
 }
@@ -514,11 +499,11 @@ a {
   background: #ffffff;
   color: #c94900;
 }
-
 .button--light:hover {
   background: #eaf3ec;
 }
 
+/* ===== Figuras decorativas ===== */
 .shape {
   display: block;
   aspect-ratio: 1/1;
@@ -569,6 +554,7 @@ a {
   border-radius: 4px 50% 4px 4px;
 }
 
+/* ===== Figuras decorativas ===== */
 .shapes {
   display: grid;
   grid-template-columns: repeat(2, 7.5rem);
@@ -576,6 +562,7 @@ a {
   gap: 0.75rem;
 }
 
+/* ===== Breadcrumb (Home > Resources > ...) ===== */
 .breadcrumbs__list {
   display: flex;
   justify-content: flex-start;
@@ -601,16 +588,15 @@ a {
 .breadcrumbs__link {
   color: #ffffff;
 }
-
 .breadcrumbs__link:focus-visible {
   outline: 3px solid #ffffff;
   outline-offset: 3px;
 }
-
 .breadcrumbs__link:hover {
   text-decoration: none;
 }
 
+/* ===== Zona verde de arriba (masthead) ===== */
 .masthead {
   position: relative;
   overflow: hidden;
@@ -618,14 +604,12 @@ a {
   background: #10551f;
   color: #ffffff;
 }
-
 @media (max-width: 1024px) {
   .masthead {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 }
-
 @media (max-width: 600px) {
   .masthead {
     padding-left: 1rem;
@@ -643,13 +627,11 @@ a {
   max-width: 59.5rem;
   padding: 4rem 0 0 5rem;
 }
-
 @media (max-width: 1024px) {
   .masthead__content {
     padding-left: 0;
   }
 }
-
 @media (max-width: 600px) {
   .masthead__content {
     padding-top: 2rem;
@@ -663,14 +645,12 @@ a {
   line-height: 4.5rem;
   color: #ffffff;
 }
-
 @media (max-width: 1024px) {
   .masthead__title {
     font-size: 2.5rem;
     line-height: 3.25rem;
   }
 }
-
 @media (max-width: 600px) {
   .masthead__title {
     font-size: 2rem;
@@ -694,19 +674,18 @@ a {
   gap: 12px;
   pointer-events: none;
 }
-
 @media (max-width: 1024px) {
   .masthead__pattern {
     opacity: 0.4;
   }
 }
-
 @media (max-width: 600px) {
   .masthead__pattern {
     display: none;
   }
 }
 
+/* ===== Figuras del masthead ===== */
 .pattern-shape {
   width: 120px;
   height: 120px;
@@ -737,12 +716,12 @@ a {
   border: 2px solid #2c833e;
 }
 
+/* ===== Cuadro de key takeaways ===== */
 .callout {
   padding: 1.5rem;
   border: 1px solid #b4c90a;
   border-radius: 4px 2.5rem 4px 2.5rem;
 }
-
 @media (min-width: 768px) {
   .callout {
     padding: 1.875rem;
@@ -766,7 +745,6 @@ a {
   position: relative;
   padding-left: 2.25rem;
 }
-
 .callout__item::before {
   content: "";
   position: absolute;
@@ -778,6 +756,7 @@ a {
   background: #2c833e;
 }
 
+/* ===== Tabla ===== */
 .data-table {
   overflow-x: auto;
   border: 1px solid #d1d1cf;
@@ -812,6 +791,7 @@ a {
   border-top: 1px solid #d1d1cf;
 }
 
+/* ===== Imagen y video ===== */
 .figure__link {
   display: block;
   overflow: hidden;
@@ -830,6 +810,7 @@ a {
   font-size: 0.875rem;
 }
 
+/* ===== Preguntas frecuentes (FAQ) ===== */
 .accordion {
   border-top: 2px solid #e7e7e6;
 }
@@ -853,13 +834,11 @@ a {
   list-style: none;
   cursor: pointer;
 }
-
 @media (min-width: 768px) {
   .accordion__summary {
     font-size: 1.25rem;
   }
 }
-
 .accordion__summary::-webkit-details-marker {
   display: none;
 }
@@ -880,12 +859,12 @@ a {
   padding: 0 1rem 1.5rem;
 }
 
+/* ===== Lista de recursos ===== */
 .resource-list {
   display: grid;
   gap: 1.5rem 3rem;
   margin-bottom: 2rem;
 }
-
 @media (min-width: 768px) {
   .resource-list {
     grid-template-columns: repeat(2, 1fr);
@@ -898,17 +877,18 @@ a {
   align-content: start;
 }
 
+/* ===== Quiz ===== */
 .quiz {
   display: grid;
   gap: 1.5rem;
 }
-
 @media (min-width: 768px) {
   .quiz {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* ===== Tarjetas del quiz ===== */
 .quiz-card {
   position: relative;
   display: grid;
@@ -1034,7 +1014,6 @@ a {
   color: #c94900;
   cursor: pointer;
 }
-
 .quiz-card__flip:hover {
   text-decoration: underline;
 }
@@ -1056,17 +1035,18 @@ a {
   grid-column: 2;
 }
 
+/* ===== Contacto ===== */
 .contact {
   display: grid;
   gap: 3rem 1.5rem;
 }
-
 @media (min-width: 768px) {
   .contact {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* ===== Tarjetas de contacto ===== */
 .contact-card__subtitle {
   margin: 1rem 0 1.5rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -1079,11 +1059,11 @@ a {
   gap: 1rem;
 }
 
+/* ===== Related resources ===== */
 .related {
   padding-block: 4rem;
   border-block: 1px solid #e7e7e6;
 }
-
 @media (min-width: 768px) {
   .related {
     padding-block: 5rem;
@@ -1099,7 +1079,6 @@ a {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
 }
-
 @media (min-width: 1024px) {
   .related__list {
     grid-auto-flow: row;
@@ -1111,6 +1090,7 @@ a {
   }
 }
 
+/* ===== Tarjetas de recursos ===== */
 .resource-card {
   padding: 2rem;
   background: #ffffff;
@@ -1128,7 +1108,6 @@ a {
   color: #c94900;
   text-decoration: none;
 }
-
 .resource-card__title:hover {
   text-decoration: underline;
 }
@@ -1139,6 +1118,7 @@ a {
   line-height: 1.6;
 }
 
+/* ===== Paginador (los puntitos) ===== */
 .pager {
   display: flex;
   flex-direction: row;
@@ -1158,4 +1138,4 @@ a {
 
 .pager__dot--active {
   background: #c94900;
-}
+}/*# sourceMappingURL=style.css.map */
