@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Western Health</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Sprite de iconos SVG (se usan con <use href="#icon-...">) -->
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16M13 5l7 7-7 7"/></symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M20 12H4M11 5l-7 7 7 7"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v13M6 11l6 6 6-6M4 21h16"/></symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3M12 15v2"/></symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="icon-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+    <symbol id="icon-return" viewBox="0 0 24 24"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M13.5 21v-7h2.5l.5-3h-3V9.5c0-.9.4-1.5 1.6-1.5h1.4V5.3C16 5.2 15.2 5 14.3 5 12.2 5 10.5 6.2 10.5 8.8V11H8v3h2.5v7z" fill="#fff"/></symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="7.6" cy="7.6" r="1.4" fill="#fff"/><path d="M6.5 10h2.2v7.5H6.5zM10.5 10h2.1v1c.5-.8 1.4-1.2 2.4-1.2 2 0 2.8 1.2 2.8 3.2v4.5h-2.2v-4c0-1-.4-1.6-1.3-1.6s-1.6.6-1.6 1.7v3.9h-2.2z" fill="#fff"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6"/></symbol>
+    <symbol id="icon-youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="#fff"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="utility-nav">
+      <ul class="utility-nav__list utility-nav__list--audiences">
+        <li><a class="utility-nav__link utility-nav__link--current utility-nav__link--arrow" href="#" aria-current="page">Individuals & families</a></li>
+        <li><a class="utility-nav__link utility-nav__link--arrow" href="#">Employer</a></li>
+        <li><a class="utility-nav__link utility-nav__link--arrow" href="#">Broker</a></li>
+        <li><a class="utility-nav__link utility-nav__link--arrow" href="#">Provider</a></li>
+      </ul>
+      <ul class="utility-nav__list utility-nav__list--tools">
+        <li><a class="utility-nav__link" href="#">Español</a></li>
+        <li><a class="utility-nav__link" href="#">Contact us</a></li>
+        <li><a class="utility-nav__link" href="#">Search
+          <svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg>
+        </a></li>
+      </ul>
+    </div>
+    <div class="main-nav">
+      <a class="main-nav__logo" href="#"><img src="img/logo.svg" width="151" height="40" alt="Western Health, home"></a>
+      <nav class="main-nav__menu" aria-label="Main">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="#">Why Western Health</a></li>
+          <li><a class="main-nav__link" href="#">Shop plans</a></li>
+          <li><a class="main-nav__link" href="#">Find care</a></li>
+          <li><a class="main-nav__link" href="#">Live well</a></li>
+          <li><a class="main-nav__link" href="#">Resources</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary" href="#">Log in</a>
+    </div>
+  </header>
+
+  <section class="masthead">
+    <div class="masthead__pattern" aria-hidden="true">
+      <span class="shape shape--green shape--leaf-tl"></span>
+        <span class="shape shape--outline-green shape--leaf-b"></span>
+        <span class="shape shape--lime shape--leaf-a"></span>
+        <span class="shape shape--lime shape--leaf-a"></span>
+        <span class="shape shape--outline-yellow shape--circle"></span>
+        <span class="shape shape--yellow shape--circle"></span>
+        <span class="shape shape--green shape--leaf-tr"></span>
+    </div>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Home</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Resources</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Resource detail title lorem</li>
+      </ol>
+    </nav>
+    <div class="masthead__content">
+      <h1 class="masthead__title">Resource detail title lorem</h1>
+      <p class="masthead__desc">Optional description fusce dapibus, tellus ac cursus commodo, tortor maruis condi, masa justo sit amet risus amet consectetur adip lorem ipsum elicitir odio agna sed osco.</p>
+      <a class="btn btn--light" href="#">Optional CTA
+        <svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- ================= ARTICULO ================= -->
+    <article class="article container container--narrow">
+
+      <aside class="callout article__block">
+        <h2 class="heading heading--sm callout__title">Key takeaways</h2>
+        <p class="callout__text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <ul class="callout__list">
+          <li class="callout__item">Bulleted text lorem ipsum dolor ist aliqua nam</li>
+          <li class="callout__item">Bulleted text consectetur adipiscing magna elit maecenus dolor</li>
+          <li class="callout__item">Bulleted text amore donec labore</li>
+        </ul>
+      </aside>
+
+      <section class="article__block">
+        <h2 class="heading heading--lg">Subhead ipsum dolor sit amet</h2>
+        <p class="text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida.</p>
+        <p class="text">Nulla vitae elit libero, a pharetra augue. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      </section>
+
+      <div class="data-table article__block">
+        <table class="data-table__table">
+          <thead>
+            <tr>
+              <th class="data-table__head" scope="col">Plan highlights</th>
+              <th class="data-table__head" scope="col">Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="data-table__cell">PCP Office or Virtual Visit</td><td class="data-table__cell">$XXXX</td></tr>
+            <tr><td class="data-table__cell">Specialist Office Visit</td><td class="data-table__cell">$XXXX</td></tr>
+            <tr><td class="data-table__cell">Prescription Medications (Tier 1 Generic Cost)</td><td class="data-table__cell">$XXXX</td></tr>
+            <tr><td class="data-table__cell">Outpatient Surgery Services</td><td class="data-table__cell">$XXXX</td></tr>
+            <tr><td class="data-table__cell">Inpatient Hospital Services</td><td class="data-table__cell">$XXXX</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure class="figure article__block">
+        <a class="figure__link" href="#" aria-label="Play video">
+          <img class="figure__image" src="img/family.jpg" alt="A father carrying two young children through a field of poppies while another child runs ahead">
+        </a>
+        <figcaption class="figure__caption">Optional caption copy mattis consectetur purus sit amet fermentum.</figcaption>
+      </figure>
+
+      <p class="text article__block">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</p>
+
+      <!-- FAQ: acordeon sin JavaScript con <details> -->
+      <section class="article__block">
+        <h2 class="heading heading--lg">Frequently asked questions</h2>
+        <div class="accordion">
+          <details class="accordion__item" name="faq" open>
+            <summary class="accordion__summary">
+              How do I qualify for fitness reimbursement?
+              <svg class="icon accordion__icon accordion__icon--plus" aria-hidden="true"><use href="#icon-plus"/></svg>
+              <svg class="icon accordion__icon accordion__icon--minus" aria-hidden="true"><use href="#icon-minus"/></svg>
+            </summary>
+            <p class="accordion__body">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          </details>
+          <details class="accordion__item" name="faq">
+            <summary class="accordion__summary">
+              Frequently asked question lorem ipsum dolor sit amet sed?
+              <svg class="icon accordion__icon accordion__icon--plus" aria-hidden="true"><use href="#icon-plus"/></svg>
+              <svg class="icon accordion__icon accordion__icon--minus" aria-hidden="true"><use href="#icon-minus"/></svg>
+            </summary>
+            <p class="accordion__body">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          </details>
+          <details class="accordion__item" name="faq">
+            <summary class="accordion__summary">
+              Frequently asked question donec labore maecenur elicitir aenean?
+              <svg class="icon accordion__icon accordion__icon--plus" aria-hidden="true"><use href="#icon-plus"/></svg>
+              <svg class="icon accordion__icon accordion__icon--minus" aria-hidden="true"><use href="#icon-minus"/></svg>
+            </summary>
+            <p class="accordion__body">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          </details>
+          <details class="accordion__item" name="faq">
+            <summary class="accordion__summary">
+              Frequently asked question cras justo odio?
+              <svg class="icon accordion__icon accordion__icon--plus" aria-hidden="true"><use href="#icon-plus"/></svg>
+              <svg class="icon accordion__icon accordion__icon--minus" aria-hidden="true"><use href="#icon-minus"/></svg>
+            </summary>
+            <p class="accordion__body">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="article__block">
+        <h3 class="heading heading--sm">A smaller subhead nulla labore nam magna</h3>
+        <p class="text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida.</p>
+        <p class="text">Nulla vitae elit libero, a pharetra augue. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      </section>
+
+      <!-- Recursos adicionales -->
+      <section class="article__block">
+        <h2 class="heading heading--lg">Additional resources</h2>
+        <div class="resource-list">
+          <ul class="resource-list__column">
+            <li class="resource-list__item"><a class="link link--large" href="#">Helpful resource link lorem ipsum<svg class="icon link__icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg></a></li>
+            <li class="resource-list__item"><a class="link link--large" href="#">Helpful resource link lorem ipsum<svg class="icon link__icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg></a></li>
+            <li class="resource-list__item"><a class="link link--large" href="#">A longer helpful resource link lorem ipsum adipiscing lorem ipsum<svg class="icon link__icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg></a></li>
+          </ul>
+          <ul class="resource-list__column">
+            <li class="resource-list__item"><a class="link link--large" href="#">A gated resource link lorem ipsum donec elicit adipiscing lorem ipsum dolor sit<svg class="icon link__icon" aria-hidden="true"><use href="#icon-lock"/></svg></a></li>
+            <li class="resource-list__item"><a class="link link--large" href="#">Gated resource link lorem ipsum<svg class="icon link__icon" aria-hidden="true"><use href="#icon-lock"/></svg></a></li>
+            <li class="resource-list__item"><a class="link link--large" href="#">Helpful resource link download<svg class="icon link__icon" aria-hidden="true"><use href="#icon-download"/></svg></a></li>
+          </ul>
+        </div>
+        <a class="button" href="#">View all resources</a>
+      </section>
+
+      <!-- Quiz: cada tarjeta cambia de cara sin JavaScript (checkbox + label) -->
+      <section class="article__block">
+        <h2 class="heading heading--lg">Blood pressure quiz</h2>
+        <p class="text">Introductory copy explaining how the quiz works lorem ipsum dolor.</p>
+
+        <div class="quiz">
+          <article class="quiz-card">
+            <input class="quiz-card__toggle" type="checkbox" id="quiz-1" aria-label="Show the answer to question 1">
+            <div class="quiz-card__face quiz-card__face--front">
+              <p class="quiz-card__number">Question #1</p>
+              <h3 class="quiz-card__question">Quiz question lorem ipsum sed dolor sit amet consectetur?</h3>
+              <ul class="quiz-card__answers">
+                <li class="quiz-card__answer"><span class="quiz-card__letter">A</span>Answer ullam quis risus ege</li>
+                <li class="quiz-card__answer"><span class="quiz-card__letter">B</span>Answer urna mollis ornare vel</li>
+                <li class="quiz-card__answer"><span class="quiz-card__letter">C</span>Answer ullam quis risus ege</li>
+                <li class="quiz-card__answer"><span class="quiz-card__letter">D</span>Answer urna mollis ornare vel</li>
+              </ul>
+              <label class="quiz-card__flip" for="quiz-1">View answer <svg class="icon" aria-hidden="true"><use href="#icon-return"/></svg></label>
+            </div>
+            <div class="quiz-card__face quiz-card__face--back">
+              <p class="quiz-card__number">Question #1</p>
+              <p class="quiz-card__result"><span class="quiz-card__letter quiz-card__letter--inverse">B</span>is the correct answer.</p>
+              <p class="quiz-card__explanation">This is the answer explanation copy lorem ipsum dolor sit amet, consectetur adipiscing elit fusce dapibus maecenus elit donec labore aliqua nam nulla magna sed odio alla.</p>
+              <label class="quiz-card__flip quiz-card__flip--light" for="quiz-1">View question <svg class="icon" aria-hidden="true"><use href="#icon-return"/></svg></label>
+            </div>
+          </article>
+
+          <article class="quiz-card">
+            <input class="quiz-card__toggle" type="checkbox" id="quiz-2" aria-label="Show the answer to question 2">
+            <div class="quiz-card__face quiz-card__face--front">
+              <p class="quiz-card__number">Question #2</p>
+              <h3 class="quiz-card__question">Quiz question lorem ipsum sed dolor sit amet consectetur?</h3>
+              <ul class="quiz-card__answers">
+                <li class="quiz-card__answer"><span class="quiz-card__letter">A</span>Answer ullam quis risus ege</li>
+                <li class="quiz-card__answer"><span class="quiz-card__letter">B</span>Answer urna mollis ornare vel</li>
+                <li class="quiz-card__answer"><span class="quiz-card__letter">C</span>Answer ullam quis risus ege</li>
+                <li class="quiz-card__answer"><span class="quiz-card__letter">D</span>Answer urna mollis ornare vel</li>
+              </ul>
+              <label class="quiz-card__flip" for="quiz-2">View answer <svg class="icon" aria-hidden="true"><use href="#icon-return"/></svg></label>
+            </div>
+            <div class="quiz-card__face quiz-card__face--back">
+              <p class="quiz-card__number">Question #2</p>
+              <p class="quiz-card__result"><span class="quiz-card__letter quiz-card__letter--inverse">A</span>is the correct answer.</p>
+              <p class="quiz-card__explanation">This is the answer explanation copy lorem ipsum dolor sit amet, consectetur adipiscing elit fusce dapibus maecenus elit donec labore aliqua nam nulla magna sed odio alla.</p>
+              <label class="quiz-card__flip quiz-card__flip--light" for="quiz-2">View question <svg class="icon" aria-hidden="true"><use href="#icon-return"/></svg></label>
+            </div>
+          </article>
+
+          <article class="quiz-card">
+            <input class="quiz-card__toggle" type="checkbox" id="quiz-3" aria-label="Show the answer to question 3">
+            <div class="quiz-card__face quiz-card__face--front">
+              <p class="quiz-card__number">Question #3</p>
+              <h3 class="quiz-card__question">Quiz question lorem ipsum sed dolor sit amet consectetur?</h3>
+              <ul class="quiz-card__answers">
+                <li class="quiz-card__answer"><span class="quiz-card__letter">A</span>Answer ullam quis risus ege</li>
+                <li class="quiz-card__answer"><span class="quiz-card__letter">B</span>Answer urna mollis ornare vel</li>
+                <li class="quiz-card__answer"><span class="quiz-card__letter">C</span>Answer ullam quis risus ege</li>
+                <li class="quiz-card__answer"><span class="quiz-card__letter">D</span>Answer urna mollis ornare vel</li>
+              </ul>
+              <label class="quiz-card__flip" for="quiz-3">View answer <svg class="icon" aria-hidden="true"><use href="#icon-return"/></svg></label>
+            </div>
+            <div class="quiz-card__face quiz-card__face--back">
+              <p class="quiz-card__number">Question #3</p>
+              <p class="quiz-card__result"><span class="quiz-card__letter quiz-card__letter--inverse">C</span>is the correct answer.</p>
+              <p class="quiz-card__explanation">This is the answer explanation copy lorem ipsum dolor sit amet, consectetur adipiscing elit fusce dapibus maecenus elit donec labore aliqua nam nulla magna sed odio alla.</p>
+              <label class="quiz-card__flip quiz-card__flip--light" for="quiz-3">View question <svg class="icon" aria-hidden="true"><use href="#icon-return"/></svg></label>
+            </div>
+          </article>
+
+          <!-- Pregunta 4: se muestra ya con la respuesta (checked), como en el diseno -->
+          <article class="quiz-card">
+            <input class="quiz-card__toggle" type="checkbox" id="quiz-4" aria-label="Show the answer to question 4" checked>
+            <div class="quiz-card__face quiz-card__face--front">
+              <p class="quiz-card__number">Question #4</p>
+              <h3 class="quiz-card__question">Quiz question lorem ipsum sed dolor sit amet consectetur?</h3>
+              <ul class="quiz-card__answers">
+                <li class="quiz-card__answer"><span class="quiz-card__letter">A</span>Answer ullam quis risus ege</li>
+                <li class="quiz-card__answer"><span class="quiz-card__letter">B</span>Answer urna mollis ornare vel</li>
+                <li class="quiz-card__answer"><span class="quiz-card__letter">C</span>Answer ullam quis risus ege</li>
+                <li class="quiz-card__answer"><span class="quiz-card__letter">D</span>Answer urna mollis ornare vel</li>
+              </ul>
+              <label class="quiz-card__flip" for="quiz-4">View answer <svg class="icon" aria-hidden="true"><use href="#icon-return"/></svg></label>
+            </div>
+            <div class="quiz-card__face quiz-card__face--back">
+              <p class="quiz-card__number">Question #4</p>
+              <p class="quiz-card__result"><span class="quiz-card__letter quiz-card__letter--inverse">B</span>is the correct answer.</p>
+              <p class="quiz-card__explanation">This is the answer explanation copy lorem ipsum dolor sit amet, consectetur adipiscing elit fusce dapibus maecenus elit donec labore aliqua nam nulla magna sed odio alla.</p>
+              <label class="quiz-card__flip quiz-card__flip--light" for="quiz-4">View question <svg class="icon" aria-hidden="true"><use href="#icon-return"/></svg></label>
+              <span class="quiz-card__decor" aria-hidden="true">
+                <span class="shape shape--lime shape--leaf-a quiz-card__decor-lime"></span>
+                <span class="shape shape--yellow shape--circle"></span>
+                <span class="shape shape--outline-white shape--leaf-b"></span>
+              </span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <p class="text article__block">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</p>
+
+      <!-- Tarjetas de contacto -->
+      <section class="contact article__block">
+        <div class="contact-card">
+          <h2 class="heading heading--sm">Contact card headline</h2>
+          <p class="contact-card__subtitle">Individual Members & Employer Group</p>
+          <div class="contact-card__links">
+            <a class="link link--icon" href="tel:1234567890"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>123.456.7890</a>
+            <a class="link link--icon" href="mailto:email@emailaddress.com"><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>email@emailaddress.com</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h2 class="heading heading--sm">Contact card headline</h2>
+          <p class="contact-card__subtitle">Individual Members & Employer Group</p>
+          <div class="contact-card__links">
+            <a class="link link--icon" href="tel:1234567890"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>123.456.7890</a>
+            <a class="link link--icon" href="mailto:email@emailaddress.com"><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>email@emailaddress.com</a>
+          </div>
+        </div>
+      </section>
+
+      <p class="article__updated">Article updated on: May 5, 2024</p>
+    </article>
+
+    <!-- ================= RELATED RESOURCES ================= -->
+    <section class="related">
+      <div class="container">
+        <h2 class="heading heading--lg">Related resources</h2>
+        <div class="related__list">
+          <article class="resource-card">
+            <a class="resource-card__title" href="#">Resource title lorem ipsum etiam porta</a>
+            <p class="resource-card__text">Optional 140-char description fusce dapibus, tellus ac cursus commodo, tortor maruis condi, masa justo sit amet risus amet consectetur adip.</p>
+          </article>
+          <article class="resource-card">
+            <a class="resource-card__title" href="#">Resource title lorem ipsum consectetur etiam porta donec labore</a>
+            <p class="resource-card__text">Optional 140-char description fusce dapibus, tellus ac cursus commodo, tortor maruis condi, masa justo sit amet risus amet consectetur adip.</p>
+          </article>
+          <article class="resource-card">
+            <a class="resource-card__title" href="#">Resource title lorem ipsum etiam porta</a>
+            <p class="resource-card__text">Optional 140-char description fusce dapibus, tellus ac cursus commodo, tortor maruis condi, masa justo sit amet risus amet consectetur adip.</p>
+          </article>
+        </div>
+        <div class="pager" aria-hidden="true">
+          <svg class="icon" focusable="false"><use href="#icon-arrow-left"/></svg>
+          <span class="pager__dot pager__dot--active"></span>
+          <span class="pager__dot"></span>
+          <span class="pager__dot"></span>
+          <span class="pager__dot"></span>
+          <svg class="icon" focusable="false"><use href="#icon-arrow-right"/></svg>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img class="footer__logo-img" src="img/logo.png" alt="Western Health">
+        <p class="footer__label">Address:</p>
+        <address class="footer__text">2349 Gateway Oaks Drive, Suite 100<br>Sacramento, California 95833</address>
+        <p class="footer__label">Contact:</p>
+        <a class="footer__contact-link" href="tel:9165632250">916.563.2250</a>
+        <a class="footer__contact-link" href="mailto:memberservices@westernhealth.com">memberservices@westernhealth.com</a>
+      </div>
+
+      <nav class="footer__column" aria-labelledby="footer-resources">
+        <h2 class="footer__heading" id="footer-resources">Resources</h2>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Our story</a></li>
+          <li><a class="footer__link" href="#">Value of our provider network</a></li>
+          <li><a class="footer__link" href="#">Mission &amp; values</a></li>
+          <li><a class="footer__link" href="#">Newsroom</a></li>
+          <li><a class="footer__link" href="#">Careers</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__column" aria-labelledby="footer-quick">
+        <h2 class="footer__heading" id="footer-quick">Quick links</h2>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Member login</a></li>
+          <li><a class="footer__link" href="#">Shop plans</a></li>
+          <li><a class="footer__link" href="#">Prescription drug lookup</a></li>
+          <li><a class="footer__link" href="#">Find a doctor</a></li>
+          <li><a class="footer__link" href="#">Discounts &amp; savings</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__column" aria-labelledby="footer-support">
+        <h2 class="footer__heading" id="footer-support">Support</h2>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Contact us</a></li>
+          <li><a class="footer__link" href="#">FAQs</a></li>
+          <li><a class="footer__link" href="#">Payments &amp; accounts</a></li>
+          <li><a class="footer__link" href="#">Mobile app</a></li>
+          <li><a class="footer__link" href="#">Send feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bar">
+        <div class="footer__legal">
+          <span>&copy; 2024 Western Health Advantage. All rights reserved.</span>
+          <a class="footer__legal-link" href="#">Privacy policy</a>
+          <a class="footer__legal-link" href="#">Terms of service</a>
+          <a class="footer__legal-link" href="#">Cookie settings</a>
+          <a class="footer__legal-link" href="#">GRIEVANCE FORM</a>
+        </div>
+        <div class="footer__social">
+          <a class="footer__social-link" href="#" aria-label="Facebook"><svg class="icon icon--solid" aria-hidden="true"><use href="#icon-facebook"/></svg></a>
+          <a class="footer__social-link" href="#" aria-label="X"><svg class="icon" aria-hidden="true"><use href="#icon-x"/></svg></a>
+          <a class="footer__social-link" href="#" aria-label="LinkedIn"><svg class="icon icon--solid" aria-hidden="true"><use href="#icon-linkedin"/></svg></a>
+          <a class="footer__social-link" href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#icon-instagram"/></svg></a>
+          <a class="footer__social-link" href="#" aria-label="YouTube"><svg class="icon icon--solid" aria-hidden="true"><use href="#icon-youtube"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

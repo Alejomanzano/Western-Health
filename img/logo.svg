@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151 40" role="img" aria-label="Western Health">
+  <!-- PROVISIONAL: reemplazar por el logo exportado desde Figma (instancia "logo") -->
+  <rect x="0" y="3" width="28" height="22" rx="4" fill="#4b8556"/>
+  <rect x="0" y="28" width="28" height="12" rx="4" fill="#b4c90a"/>
+  <path d="M30 19h14v20H30z" fill="#e7732f"/>
+  <circle cx="38" cy="9" r="7" fill="#ffb800"/>
+  <text x="58" y="15" font-family="Lexend, sans-serif" font-size="13" font-weight="500" fill="#484848">Western</text>
+  <text x="58" y="36" font-family="Lexend, sans-serif" font-size="13" font-weight="500" fill="#4b8556">Health</text>
+</svg>
