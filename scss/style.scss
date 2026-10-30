@@ -20,7 +20,15 @@ $fuente-titulos: "Helvetica Neue", Arial, sans-serif;
 $fuente-lexend: "Lexend", sans-serif;
 $fuente-work: "Work Sans", sans-serif;
 
-/* ===== Estilos generales ===== */
+// Mixins
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+/* Estilos generales  */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -155,6 +163,7 @@ a {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.4;
+  border-radius: 4px;
   text-decoration: none;
   border: 1px solid transparent;
   transition: background-color 0.25s ease, transform 0.25s ease;
@@ -165,6 +174,7 @@ a {
   }
 
   &:hover {
+    background-color: #020101;
     transform: translateY(-2px);
   }
 
@@ -180,11 +190,44 @@ a {
   &:hover {
     background: #a33a00;
   }
+  
+}
+
+#lightbox{
+  
+}
+
+
+.lightbox{
+  display: none;
+  
+  img{
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+
+    &:focus{
+      
+    }
+  }
+}
+
+.lightbox:target{
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .btn--light {
   background: $blanco;
   color: $naranja;
+  font-size: 15px;
 
   &:hover {
     background: $fondo-claro;
@@ -193,9 +236,15 @@ a {
   &:focus-visible {
     outline-color: $blanco;
   }
+
+
+  &:focus{
+
+  }
+
 }
 
-/* ===== Menu de arriba (Individuals, Employer, Broker...) ===== */
+/*  Menu de arriba (Individuals, Employer, Broker...) */
 .utility-nav {
   display: flex;
   justify-content: space-between;
@@ -415,15 +464,16 @@ a {
 /* ===== Articulo ===== */
 .article {
   padding-block: 4rem 4rem;
-
-  @media (min-width: 768px) {
+  
+  @media (max-width: 768px) {
     padding-block: 5rem 4rem;
+    
   }
 }
 
 .article__block {
   margin-top: 4rem;
-
+  
   &:first-child {
     margin-top: 0;
   }
@@ -435,7 +485,7 @@ a {
   font-style: italic;
 }
 
-/* ===== Iconos ===== */
+/* Iconos */
 .icon {
   flex-shrink: 0;
   width: 1.25rem;
@@ -462,7 +512,7 @@ a {
   stroke: none;
 }
 
-/* ===== Sprite de iconos (esta escondido) ===== */
+/* Sprite de iconos (esta escondido) */
 .icon-sprite {
   position: absolute;
   width: 0;
@@ -470,7 +520,7 @@ a {
   overflow: hidden;
 }
 
-/* ===== Links ===== */
+/* Links */
 .link {
   font-family: $fuente-titulos;
   font-weight: 500;
@@ -500,7 +550,7 @@ a {
   vertical-align: -0.2em;
 }
 
-/* ===== Boton normal ===== */
+/* Boton normal */
 .button {
   display: inline-flex;
   align-items: center;
@@ -530,7 +580,7 @@ a {
   }
 }
 
-/* ===== Figuras decorativas ===== */
+/* Figuras decorativas */
 .shape {
   display: block;
   aspect-ratio: 1/1;
@@ -581,7 +631,7 @@ a {
   border-radius: 4px 50% 4px 4px;
 }
 
-/* ===== Figuras decorativas ===== */
+/* Figuras decorativas */
 .shapes {
   display: grid;
   grid-template-columns: repeat(2, 7.5rem);
@@ -589,7 +639,7 @@ a {
   gap: 0.75rem;
 }
 
-/* ===== Breadcrumb (Home > Resources > ...) ===== */
+/* Breadcrumb (Home > Resources > ...) */
 .breadcrumbs__list {
   display: flex;
   justify-content: flex-start;
@@ -625,7 +675,7 @@ a {
   }
 }
 
-/* ===== Zona verde de arriba (masthead) ===== */
+/* Zona verde de arriba (masthead) */
 .masthead {
   position: relative;
   overflow: hidden;
@@ -817,6 +867,31 @@ a {
   display: block;
   overflow: hidden;
   border-radius: 8px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 11px solid #d35400;
+    z-index: 1;
+  }
 }
 
 .figure__image {
@@ -831,7 +906,7 @@ a {
   font-size: 0.875rem;
 }
 
-/* ===== Preguntas frecuentes (FAQ) ===== */
+/* Preguntas frecuentes */
 .accordion {
   border-top: 2px solid $gris-claro;
 }
@@ -1074,8 +1149,8 @@ a {
 }
 
 .contact-card__links {
-  display: grid;
-  gap: 1rem;
+  @include flex-center;
+  gap: 15px;
 }
 
 /* ===== Related resources ===== */
